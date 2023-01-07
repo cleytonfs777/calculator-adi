@@ -82,18 +82,20 @@ input{
 
 .titulo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     color: var(--white-color);
     line-height: 1.5;
     font-weight: bold;
-    word-spacing: 2rem;
+    word-spacing: 1rem;
     margin-right: 16rem;
+    margin-top: 1rem;
 }
 
 .titulo > p {
     margin: 0 auto;
-    padding-left: 15rem;
+    padding-left: 5rem;
+    text-align: center;
 }
 
 
@@ -107,12 +109,19 @@ input{
     
     }
     p {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         padding-left: 0!important;
         margin: 0 auto;
         text-align: center;
     }
     .titulo {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: var(--white-color);
+        line-height: 1.5;
+        font-weight: bold;
+        word-spacing: 1rem;
         padding-left: 0;
         margin: 0 auto;
     }
@@ -134,7 +143,7 @@ input{
         background: var(--main-color);
     }
     p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
         padding-left: 0;
         margin: 0 auto;
