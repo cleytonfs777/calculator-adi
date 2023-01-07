@@ -91,14 +91,15 @@ input{
     font-weight: bold;
     word-spacing: 1rem;
     margin-right: 16rem;
-    margin-top: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .titulo > p {
     margin: 0 auto;
     padding-left: 5rem;
-    text-align: center;
-    font-size: 1.2rem;
+    text-align: justify;
+    font-size: 1rem;
 }
 
 
@@ -119,14 +120,16 @@ input{
     }
     .titulo {
         font-family: 'Montserrat', sans-serif;
-        font-size: .5rem;
+        font-size: 1rem;
         text-transform: uppercase;
         color: var(--white-color);
         line-height: 1.5;
         font-weight: bold;
         word-spacing: 1rem;
         padding-left: 0;
-        margin: 0 auto;
+        margin:0 auto;
+        width: 80%;
+        margin-bottom: 1rem;
     }
     .logo {
         display: flex!important;
@@ -155,7 +158,7 @@ input{
 
     }
     p {
-        font-size: 1rem;
+        font-size: .1rem;
         text-align: center;
         padding-left: 0;
         margin: 0 auto;
@@ -163,11 +166,12 @@ input{
     .titulo {
         padding-left: 0;
         margin: 0 auto;
+        width: 80%;
     }
     .titulo > p {
         margin: 0 auto;
         padding-left: 0;
-        text-align: center;
+        text-align: justify;
     }
 }
 .hidden {
@@ -181,6 +185,7 @@ input{
     max-width: 1600px;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
+    min-width: 40rem;
 }
 
 
