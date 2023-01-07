@@ -85,7 +85,7 @@ input{
 .titulo {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color: var(--white-color);
     line-height: 1.5;
     font-weight: bold;
@@ -121,7 +121,7 @@ input{
     .titulo {
         font-family: 'Montserrat', sans-serif;
         font-size: 1rem;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         color: var(--white-color);
         line-height: 1.5;
         font-weight: bold;
