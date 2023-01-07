@@ -114,6 +114,9 @@ input{
         margin: 0 auto;
         text-align: center;
     }
+    .logo{
+        margin-bottom: 1rem;
+    }
     .titulo {
         font-family: 'Montserrat', sans-serif;
         font-size: 1.5rem;
