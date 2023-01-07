@@ -31,7 +31,9 @@ color: var(--primary-color);
 line-height: 1.5;
 min-width: 100%;
 background-color: var(--backgroundn-color);
-background-image:  url('/assets/img/bombeiro.png')
+background-image:  url('/assets/img/bombeiro.png');
+background-repeat: no-repeat;
+background-size:cover;
 
 }
 .over-menu {
