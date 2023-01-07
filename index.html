@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora AADP ADI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- INICIO DO MODAL -->
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2 id="modal-title">Este é o Modal</h2>
+            <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+            <h3 id="modal-legis">Legis</h3>
+            <div class="modal-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ipsa iusto
+                    eveniet veniam eos id magni neque dolor ea optio enim debitis culpa distinctio
+                    perferendis quis pariatur error dolorem. Cum.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore eum hic obcaecati
+                    excepturi veniam culpa commodi maiores exercitationem, blanditiis labore at nam
+                    assumenda vitae optio repellendus aperiam illum doloremque architecto?</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FIM DO MODAL -->
+    <div class="over-menu">
+        <div class="menu">
+            <div class="logo">
+                <img src="assets/img/simbolo.svg" alt="" width="50rem" height="50rem"></span>
+            </div>
+            <div class="titulo">
+                <p>Calculadora AADI ADP</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="colorf" onchange="monitors()">
+            <h2>Calculadora AADP</h2>
+            <!-- Iniciando as linhas -->
+            <div class="linha">
+                <div class="entrada">
+                    <label for="disciplina" class="form-lab">DISCIPLINA</label><br>
+                    <span>Conceito disciplinar do militar</span><button id="modal-disc" class="button">Saiba
+                        mais</button>
+
+                    <select name="disciplina" id="disciplina" onchange="myFunction('disciplina', 'disc-nota')">
+                        <option value="0" data-default selected></option>
+                        <option value="10">Conceito "A"</option>
+                        <option value="9">Conceito "B" - Superior a 35 pontos positivos</option>
+                        <option value="8">Conceito "B" - 25 pontos a 35 pontos positivos
+                        </option>
+                        <option value="7">Conceito "B" - Até 24 pontos positivos</option>
+                        <option value="6">Conceito "B" - Zero pontos</option>
+                        <option value="5">Conceito "B" - Negativa superior a 25 pontos</option>
+                        <option value="4">Conceito "B" - Negativa menor ou igual a 25 ponto</option>
+                        <option value="1">Conceito "C"</option>
+                    </select>
+                </div>
+                <div class="saida" style="text-align: center;">
+                    <label for="nota">Nota</label>
+                    <h2 class="nota" id="disc-nota">0</h2>
+                </div>
+            </div>
+            <!-- Iniciando as linhas -->
+            <div class="linha">
+                <div class="entrada">
+                    <label for="hab-prof" class="form-lab">Habilidades Profissionais</label><br>
+                    <span>Desempenho na ATP</span><button id="modal-hab" class="button">Saiba
+                        mais</button><br>
+                    <select name="hab-prof" id="habilidades" onchange="myFunction('habilidades', 'hab-nota')">
+                        <option value="0" data-default selected></option>
+                        <option value=" 15">APTO na ADP</option>
+                        <option value="3">INAPTO na ADP</option>
+                    </select>
+                </div>
+                <div class="saida" style="text-align: center;">
+                    <label for="nota">Nota</label>
+                    <h2 class="nota" id="hab-nota">0</h2>
+                </div>
+            </div>
+
+            <!-- Iniciando as linhas -->
+            <div class="linha">
+                <div class="entrada">
+                    <label for="disciplina" class="form-lab">Aptidao física</label><br>
+                    <span>Média final do TAF</span><button id="modal-apt" class="button">Saiba
+                        mais</button>
+                    <select name="disciplina" id="aptidao" onchange="myFunction('aptidao', 'aptidao-nota')">
+                        <option value="0" data-default selected></option>
+                        <option value="15">Média final de 9 a 10 pontos</option>
+                        <option value="14">Média final de 8 a 8,99 pontos</option>
+                        <option value="13">Média final de 7 a 7,99 pontos</option>
+                        <option value="12">Média final de 6 a 6,99 pontos</option>
+                        <option value="3">Média final inferior a 6 pontos</option>
+                    </select>
+                </div>
+                <div class="saida" style="text-align: center;">
+                    <label for="nota">Nota</label>
+                    <h2 class="nota" id="aptidao-nota">0</h2>
+                </div>
+            </div>
+
+            <!-- Iniciando as linhas -->
+            <div class="linha">
+                <div class="entrada">
+                    <label for="afastamento" class="form-lab">Disponibilidade para o trabalho</label><br>
+                    <span>Dias de afastamento do serviço</span><button id="modal-disp" class="button">Saiba
+                        mais</button>
+                    <select name="afastamento" id="disponibilidade"
+                        onchange="myFunction('disponibilidade', 'disponibilidade-nota')">
+                        <option value="0" data-default selected></option>
+                        <option value="10">Afastamento inexistente</option>
+                        <option value="9">Afastamento de 1 até 30 dias</option>
+                        <option value="8">Afastamento de 31 até 45 dias</option>
+                        <option value="7">Afastamento de 46 até 60 dias</option>
+                        <option value="5">Afastamento de 61 até 90 dias</option>
+                        <option value="3">Afastamento acima de 90 dias</option>
+                    </select>
+                </div>
+                <div class="saida" style="text-align: center;">
+                    <label for="nota">Nota</label>
+                    <h2 class="nota" id="disponibilidade-nota">0</h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="colorf segdiv">
+            <h2 style="margin-bottom:1.5em;">Calculadora ADI</h2>
+            <!-- Iniciando as linhas -->
+            <div class="linha">
+                <div class="entrada">
+                    <label for="disciplina">AADP</label><br>
+                    <span>Resultado de Calculos de 4 variáveis</span><button id="modal-aadp" class="button">Saiba
+                        mais</button>
+                    <select name="afastamento">
+                        <option value="0" data-default selected>Preenchido automaticamente</option>
+                    </select>
+
+                </div>
+                <div class="saida" style="text-align: center;">
+                    <label for="nota">Nota</label>
+                    <h2 class="nota" id="nota-adp">0</h2>
+                </div>
+            </div>
+            <!-- Iniciando as linhas -->
+            <div class="linha">
+                <div class="entrada">
+                    <label for="disciplina" class="form-lab">Conceito</label><br>
+                    <span>Desempenho do militar no TPB</span><button id="modal-conc" class="button">Saiba
+                        mais</button><br>
+                    <select name="conceito" id="conceito" onchange="myFunction('conceito', 'conceito-nota')">
+                        <option value="0" data-default selected></option>
+                        <option value="30">Acima de B24</option>
+                        <option value="25">B0 até B24</option>
+                        <option value="20">B-24 até B-1</option>
+                        <option value="15">B-50 até B-25</option>
+                    </select>
+                </div>
+                <div class="saida" style="text-align: center;">
+                    <label for="nota">Nota</label>
+                    <h2 class="nota" id="conceito-nota">0</h2>
+                </div>
+            </div>
+
+            <!-- Iniciando as linhas -->
+            <div class="linha">
+                <div class="entrada">
+                    <label for="tpb" class="form-lab">TPB</label><br>
+                    <span>Provas com aptidão no TPB</span><button id="modal-tpb" class="button">Saiba
+                        mais</button>
+                    <select name="tpb" id="tpb" onchange="myFunction('tpb', 'tpb-nota')">
+                        <option value="0" data-default selected></option>
+                        <option value="20">Aptidão nas três provas</option>
+                        <option value="15">Aptidão em duas das três provas</option>
+                        <option value="10">Aptidão em uma das três provas</option>
+                        <option value="0">Inaptidão em todas as provas</option>
+                    </select>
+                </div>
+                <div class="saida" style="text-align: center;">
+                    <label for="nota">Nota</label>
+                    <h2 class="nota" id="tpb-nota">0</h2>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="mai">
+            <div class="linha">
+                <div class="saida-n">
+                    <button onclick="limparAadp()">LIMPAR AADP</button>
+                </div>
+                <div class="saida-n segdiv">
+                    <button style="color:green;" onclick="limparAdi()">LIMPAR ADI</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mai energy" id="ultima">
+            <div class="linha">
+                <div class="saida-n">
+                    <h4 for="">Nota Final AADP: </h4>
+                    <h1 for="" class="nota" id="final-adp">---</h1>
+                </div>
+                <div class="saida-n segdiv">
+                    <h4 for="">Nota Final ADI: </h4>
+                    <h1 for="" class="nota" id="final-adi">---</h1>
+                </div>
+            </div>
+        </div>
+        <div class="footer" id="espaco">
+            <div>Criador do Projeto: Lucas Oliveira</div>
+            <div>Desenvolvimento: Cleyton Batista</div>
+        </div>
+
+</body>
+
+</html>
