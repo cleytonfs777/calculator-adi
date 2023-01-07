@@ -115,7 +115,6 @@ input{
     
     }
     p {
-        font-size: 1rem;
         padding-left: 0!important;
         margin: 0 auto;
         text-align: center;
@@ -132,6 +131,9 @@ input{
         margin:0 auto;
         width: 80%;
         margin-bottom: 1rem;
+    }
+    .titulo > P{
+        font-size: 1rem;
     }
     .logo {
         display: flex!important;
@@ -160,7 +162,6 @@ input{
 
     }
     p {
-        font-size: .1rem;
         text-align: center;
         padding-left: 0;
         margin: 0 auto;
@@ -172,6 +173,7 @@ input{
         margin-bottom: 1rem;
     }
     .titulo > p {
+        font-size: .1rem;
         margin: 0 auto;
         padding-left: 0;
         text-align: justify;
