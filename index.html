@@ -56,12 +56,15 @@
 
     <div class="container">
         <div class="colorf" onchange="monitors()">
+            <button class="limpador" onclick="limparAadp()">LIMPAR CAMPOS</button>
             <h2>Calculadora AADP</h2>
             <!-- Iniciando as linhas -->
             <div class="linha">
                 <div class="entrada">
-                    <label for="disciplina" class="form-lab">DISCIPLINA</label><br>
-                    <span>Conceito disciplinar do militar</span><button id="modal-disc" class="button">Saiba
+                    <div class="title-cas">
+                        <label for="disciplina" class="form-lab">DISCIPLINA</label>
+                    </div>
+                    <span>Conceito disciplinar do militar</span><button id="modal-disc" class="button-saiba">Saiba
                         mais</button>
 
                     <select name="disciplina" id="disciplina" onchange="myFunction('disciplina', 'disc-nota')">
@@ -85,8 +88,10 @@
             <!-- Iniciando as linhas -->
             <div class="linha">
                 <div class="entrada">
-                    <label for="hab-prof" class="form-lab">Habilidades Profissionais</label><br>
-                    <span>Desempenho na ATP</span><button id="modal-hab" class="button">Saiba
+                    <div class="title-cas">
+                        <label for="hab-prof" class="form-lab">Habilidades Profissionais</label>
+                    </div>
+                    <span>Desempenho na ATP</span><button id="modal-hab" class="button-saiba">Saiba
                         mais</button><br>
                     <select name="hab-prof" id="habilidades" onchange="myFunction('habilidades', 'hab-nota')">
                         <option value="0" data-default selected></option>
@@ -103,8 +108,10 @@
             <!-- Iniciando as linhas -->
             <div class="linha">
                 <div class="entrada">
-                    <label for="disciplina" class="form-lab">Aptidao física</label><br>
-                    <span>Média final do TAF</span><button id="modal-apt" class="button">Saiba
+                    <div class="title-cas">
+                        <label for="disciplina" class="form-lab">Aptidao física</label>
+                    </div>
+                    <span>Média final do TAF</span><button id="modal-apt" class="button-saiba">Saiba
                         mais</button>
                     <select name="disciplina" id="aptidao" onchange="myFunction('aptidao', 'aptidao-nota')">
                         <option value="0" data-default selected></option>
@@ -124,8 +131,10 @@
             <!-- Iniciando as linhas -->
             <div class="linha">
                 <div class="entrada">
-                    <label for="afastamento" class="form-lab">Disponibilidade para o trabalho</label><br>
-                    <span>Dias de afastamento do serviço</span><button id="modal-disp" class="button">Saiba
+                    <div class="title-cas">
+                        <label for="afastamento" class="form-lab">Disponibilidade para o trabalho</label>
+                    </div>
+                    <span>Dias de afastamento do serviço</span><button id="modal-disp" class="button-saiba">Saiba
                         mais</button>
                     <select name="afastamento" id="disponibilidade"
                         onchange="myFunction('disponibilidade', 'disponibilidade-nota')">
@@ -144,14 +153,24 @@
                 </div>
             </div>
 
+
+            <div class="saida-n">
+                <h4 class="title-nota">Nota Final AADP: </h4>
+                <h1 class="nota" id="final-adp">---</h1>
+            </div>
+
+
         </div>
         <div class="colorf segdiv">
+            <button style="color:rgb(6, 63, 6);" class="limpador" onclick="limparAdi()">LIMPAR CAMPOS</button>
             <h2 style="margin-bottom:1.5em;">Calculadora ADI</h2>
             <!-- Iniciando as linhas -->
             <div class="linha">
                 <div class="entrada">
-                    <label for="disciplina">AADP</label><br>
-                    <span>Resultado de Calculos de 4 variáveis</span><button id="modal-aadp" class="button">Saiba
+                    <div class="title-cas">
+                        <label for="disciplina">AADP</label>
+                    </div>
+                    <span>Resultado de Calculos de 4 variáveis</span><button id="modal-aadp" class="button-saiba">Saiba
                         mais</button>
                     <select name="afastamento">
                         <option value="0" data-default selected>Preenchido automaticamente</option>
@@ -166,8 +185,10 @@
             <!-- Iniciando as linhas -->
             <div class="linha">
                 <div class="entrada">
-                    <label for="disciplina" class="form-lab">Conceito</label><br>
-                    <span>Desempenho do militar no TPB</span><button id="modal-conc" class="button">Saiba
+                    <div class="title-cas">
+                        <label for="disciplina" class="form-lab">Conceito</label>
+                    </div>
+                    <span>Desempenho do militar no TPB</span><button id="modal-conc" class="button-saiba">Saiba
                         mais</button><br>
                     <select name="conceito" id="conceito" onchange="myFunction('conceito', 'conceito-nota')">
                         <option value="0" data-default selected></option>
@@ -186,8 +207,10 @@
             <!-- Iniciando as linhas -->
             <div class="linha">
                 <div class="entrada">
-                    <label for="tpb" class="form-lab">TPB</label><br>
-                    <span>Provas com aptidão no TPB</span><button id="modal-tpb" class="button">Saiba
+                    <div class="title-cas">
+                        <label for="tpb" class="form-lab">TPB</label>
+                    </div>
+                    <span>Provas com aptidão no TPB</span><button id="modal-tpb" class="button-saiba">Saiba
                         mais</button>
                     <select name="tpb" id="tpb" onchange="myFunction('tpb', 'tpb-nota')">
                         <option value="0" data-default selected></option>
@@ -203,32 +226,13 @@
                 </div>
             </div>
 
-        </div>
-
-
-        <div class="mai">
-            <div class="linha">
-                <div class="saida-n">
-                    <button onclick="limparAadp()">LIMPAR AADP</button>
-                </div>
-                <div class="saida-n segdiv">
-                    <button style="color:green;" onclick="limparAdi()">LIMPAR ADI</button>
-                </div>
+            <div class="saida-n segdiv">
+                <h4 class="title-nota">Nota Final ADI: </h4>
+                <h1 class="nota" id="final-adi">---</h1>
             </div>
+
         </div>
 
-        <div class="mai energy" id="ultima">
-            <div class="linha">
-                <div class="saida-n">
-                    <h4 for="">Nota Final AADP: </h4>
-                    <h1 for="" class="nota" id="final-adp">---</h1>
-                </div>
-                <div class="saida-n segdiv">
-                    <h4 for="">Nota Final ADI: </h4>
-                    <h1 for="" class="nota" id="final-adi">---</h1>
-                </div>
-            </div>
-        </div>
         <div class="footer" id="espaco">
             <div>Criador do Projeto: Lucas Oliveira</div>
             <div>Desenvolvimento: Cleyton Batista</div>

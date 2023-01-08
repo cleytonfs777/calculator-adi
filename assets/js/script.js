@@ -86,7 +86,7 @@ function limparAdi(){
 
 // FUNÇAO DAS MODAIS
 
-const openModalButton = document.querySelectorAll(".button");
+const openModalButton = document.querySelectorAll(".button-saiba");
 const closeModalButton = document.querySelector("#close-modal");
 const modaly = document.querySelector("#modal");
 const hiddido = document.querySelector("#fade");

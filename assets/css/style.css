@@ -6,7 +6,8 @@
     --main-color:rgb(70, 1, 1);
     --green-color:rgb(7, 71, 7);
     --light-gray-color: #cccccc;
-    --medium-gray-color: #777;
+    --medium-gray-color: #999;
+    --dark-gray-color: #444;
     --white-color: #fff;
     --gap: 3rem;
 }
@@ -21,6 +22,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    min-height: 100%!important;
 
   }
   
@@ -173,7 +175,7 @@ input{
         margin-bottom: 1rem;
     }
     .titulo > p {
-        font-size: .1rem;
+        font-size: 1rem;
         margin: 0 auto;
         padding-left: 0;
         text-align: justify;
@@ -199,7 +201,21 @@ input{
     box-shadow: 0 0 1em rgb(46, 46, 45);
     justify-content: center;
     border-radius: 1.2rem;
-
+    padding-top: 1.5rem;
+    position: relative;
+}
+.limpador{
+    position: absolute;
+    top:0.1;
+    right: 0;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    width: 11rem;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.limpador:hover{
+    background: var(--medium-gray-color);
 }
 .container .mai {
     background: var(--white-color);    
@@ -219,21 +235,23 @@ span {
     margin: 0
 }
 .linha {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--primary-color);
-    margin: 0.6rem;
+    margin: 1rem auto;
     padding: 0.6rem;
     line-height: 1;
     border-radius: 10px;
+    width: 35rem;
 }
 
 .saida {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
+    margin-top: 1rem;
+    padding-top: .5rem;
+    border-top: 1px solid #ccc;
 }
 .saida-n {
     display: flex;
@@ -241,6 +259,7 @@ span {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    line-height: 1;
 }
 .form-lab {
     text-transform: uppercase;
@@ -282,7 +301,11 @@ span {
 
 }
 .nota {
-    font-size: 3.6rem;
+    font-size: 2.5rem;
+}
+
+.saida-n .nota {
+    font-size: 4.5rem;
 }
 
 .base-calcular{
@@ -310,21 +333,18 @@ button {
     font-size: 1.4rem;
 }
 
-.button {
+.button-saiba {
     font-size: 1rem;
+    text-decoration: underline;
     height: 1rem;
     width: 5.5rem;
     margin-left: 1rem;
     margin-bottom: .5rem;
     padding: .1rem;
     cursor: pointer;
-    border-radius: 1rem;
-    background: var(--secondary-color);
-    color: var(--white-color);
-}
-
-.button:hover {
-    background-color: rgb(87, 20, 20);
+    border: none;
+    color: var(--primary-color);
+    background: var(--white-color);
 }
 
 #fade,
@@ -395,4 +415,13 @@ button {
 
 .modal-content p {
     text-align: justify;
+}
+.title-cas {
+    background-image: linear-gradient(to bottom right, rgba(248, 135, 135, 0.705), white);
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-bottom: .5rem;
+}
+.title-nota {
+    font-size: 2.7rem;
 }
