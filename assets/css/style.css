@@ -333,8 +333,9 @@ button {
     width: 100%;
     text-align: center;
     line-height: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .button-saiba {
@@ -445,3 +446,7 @@ button {
 .main-cab h2 {
     margin-right: 1rem;
 } 
+body > div.container > div.colorf.segdiv > div.saida-n.segdiv::before{
+    content: "";
+    height: 12rem;
+}
