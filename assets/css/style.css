@@ -189,6 +189,10 @@ input{
         grid-column: span 1;
         min-width: 100%;
     }
+    body > div.container > div.colorf.segdiv > div.saida-n.segdiv::before{
+        content: "";
+        height: 0;
+    }
 
 
 
