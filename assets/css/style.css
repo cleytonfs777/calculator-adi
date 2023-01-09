@@ -216,6 +216,9 @@ input{
         content: "";
         height: 0;
     }
+    select {
+        font-size: 1.1rem;
+    }
 
 }
 @media (max-width: 380px) {
@@ -231,6 +234,9 @@ select {
 h1#final-adp,
 h1#final-adi{
     font-size: 2rem;
+}
+select {
+    font-size: 1.1rem;
 }
 
 }
