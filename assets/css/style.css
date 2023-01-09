@@ -193,6 +193,11 @@ input{
         content: "";
         height: 0!important;
     }
+    select {
+        font-size: 1.1rem;
+    }
+
+
 
 
 
