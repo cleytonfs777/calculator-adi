@@ -2,7 +2,7 @@
 :root {
     --primary-color: #03132C;
     --secondary-color: crimson;
-    --backgroundr-color: rgb(167, 29, 29);
+    --backgroundn-color: rgb(167, 29, 29);
     --main-color:rgb(70, 1, 1);
     --green-color:rgb(7, 71, 7);
     --light-gray-color: #cccccc;
@@ -74,14 +74,14 @@ input{
     display: grid;
     margin: 0 auto;
     min-width: 100%;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 1fr;
     margin-bottom: 1.5rem;
 
 }
 .logo{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     margin-bottom: .5rem;
     margin-top: .5rem;
 }
