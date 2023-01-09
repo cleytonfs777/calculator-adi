@@ -191,7 +191,7 @@ input{
     }
     body > div.container > div.colorf.segdiv > div.saida-n.segdiv::before{
         content: "";
-        height: 0;
+        height: 0!important;
     }
 
 
@@ -206,6 +206,10 @@ input{
         margin-bottom: 1.5rem;
 
 
+    }
+    body > div.container > div.colorf.segdiv > div.saida-n.segdiv::before{
+        content: "";
+        height: 0;
     }
 
 }
