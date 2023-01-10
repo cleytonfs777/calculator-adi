@@ -42,9 +42,9 @@ function myFunction(argument1, argument2){
     }
 
 
-    let nota5 = parseFloat(document.getElementById('nota-adp').innerText)
-    let nota6 = parseFloat(document.getElementById('conceito-nota').innerText)
-    let nota7 = parseFloat(document.getElementById('tpb-nota').innerText)
+    let nota5 = document.getElementById('nota-adp').innerText != '---' ? parseFloat(document.getElementById('nota-adp').innerText) : '---'
+    let nota6 = document.getElementById('conceito-nota').innerText != '---' ? parseFloat(document.getElementById('conceito-nota').innerText) : '---'
+    let nota7 = document.getElementById('tpb-nota').innerText != '---' ? parseFloat(document.getElementById('tpb-nota').innerText) : '---'
     let item7 = document.getElementById('tpb').selectedIndex
     let item8 = document.getElementById('conceito').selectedIndex
 
@@ -59,32 +59,38 @@ function myFunction(argument1, argument2){
         document.getElementById('final-adi').innerText = '---'
         return
     }
+    if(nota5 == '---'){
+        document.getElementById('final-adi').innerText = '---'
+        return
+    }else{
+        console.log(nota5)
+        finalAdi.innerText = nota5 != '---' ? nota5 + nota6 + nota7 : '---'
+    }
     
-    finalAdi.innerText = nota5 != 0.0 ? nota5 + nota6 + nota7 : '---'
-
+    
 
 }
 
 function limparAadp(){
-    document.getElementById('disciplina').value = '0'
-    document.getElementById('habilidades').value = '0'
-    document.getElementById('aptidao').value = '0'
-    document.getElementById('disponibilidade').value = '0'
-    document.getElementById('disc-nota').innerText = '0'
-    document.getElementById('hab-nota').innerText = '0'
-    document.getElementById('aptidao-nota').innerText = '0'
-    document.getElementById('disponibilidade-nota').innerText = '0'
-    document.getElementById('nota-adp').innerText = '0'
+    document.getElementById('disciplina').value = '---'
+    document.getElementById('habilidades').value = '---'
+    document.getElementById('aptidao').value = '---'
+    document.getElementById('disponibilidade').value = '---'
+    document.getElementById('disc-nota').innerText = '---'
+    document.getElementById('hab-nota').innerText = '---'
+    document.getElementById('aptidao-nota').innerText = '---'
+    document.getElementById('disponibilidade-nota').innerText = '---'
+    document.getElementById('nota-adp').innerText = '---'
     document.getElementById('final-adp').innerText = '---'
     document.getElementById('final-adi').innerText = '---'
 
 }
 
 function limparAdi(){
-    document.getElementById('tpb').value = '0'
-    document.getElementById('conceito').value = '0'
+    document.getElementById('tpb').value = '---'
+    document.getElementById('conceito').value = '---'
     document.getElementById('final-adi').innerText = '---'
-    document.getElementById('conceito-nota').innerText = '0'
+    document.getElementById('conceito-nota').innerText = '---'
     document.getElementById('tpb-nota').innerText = '---'
 }
 
