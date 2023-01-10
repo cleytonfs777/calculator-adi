@@ -8,14 +8,13 @@ function myFunction(argument1, argument2){
     let finalAdp = document.getElementById('final-adp')
     let finalAdi = document.getElementById('final-adi')
 
-    let nota1 = parseFloat(document.getElementById('disc-nota').innerText)
-    let nota2 = parseFloat(document.getElementById('hab-nota').innerText)
-    let nota3 = parseFloat(document.getElementById('aptidao-nota').innerText)
-    let nota4 = parseFloat(document.getElementById('disponibilidade-nota').innerText)
+    let nota1 = document.getElementById('disc-nota').innerText != '---' ? parseFloat(document.getElementById('disc-nota').innerText) : '---'
+    let nota2 = document.getElementById('hab-nota').innerText != '---' ? parseFloat(document.getElementById('hab-nota').innerText) : '---'
+    let nota3 = document.getElementById('aptidao-nota').innerText != '---' ? parseFloat(document.getElementById('aptidao-nota').innerText) : '---'
+    let nota4 = document.getElementById('disponibilidade-nota').innerText != '---' ? parseFloat(document.getElementById('disponibilidade-nota').innerText) : '---'
 
     let arri = new Array(nota1, nota2, nota3, nota4)
-    
-    if(!arri.includes(0)){
+    if(!arri.includes('---')){
         let aadp1 = (arri[0] + arri[1] + arri[2] + arri[3])*0.2
         if(aadp1 >= 9){
             notaAdp.innerText = "50"
@@ -33,10 +32,13 @@ function myFunction(argument1, argument2){
             notaAdp.innerText = "10"
             finalAdp.innerText = "10"
         }else{
-            notaAdp.innerText = "0"
-            finalAdp.innerText = "0"
+            notaAdp.innerText = "---"
+            finalAdp.innerText = "---"
         }
         
+    }else{
+        notaAdp.innerText = '---'
+        finalAdp.innerText = '---'
     }
 
 
@@ -44,6 +46,7 @@ function myFunction(argument1, argument2){
     let nota6 = parseFloat(document.getElementById('conceito-nota').innerText)
     let nota7 = parseFloat(document.getElementById('tpb-nota').innerText)
     let item7 = document.getElementById('tpb').selectedIndex
+    let item8 = document.getElementById('conceito').selectedIndex
 
     let arr2 = new Array(nota5, nota6)
 
@@ -51,12 +54,13 @@ function myFunction(argument1, argument2){
         document.getElementById('tpb-nota').innerText = '---'
         document.getElementById('final-adi').innerText = '---'
         return
+    }else if(item8 == 0){
+        document.getElementById('conceito-nota').innerText = '---'
+        document.getElementById('final-adi').innerText = '---'
+        return
     }
-    if((!arr2.includes(0)) && item7 != 0){
-        let arr = (arr2[0] + arr2[1] + nota7)
-        finalAdi.innerText = arr
-
-    }
+    
+    finalAdi.innerText = nota5 != 0.0 ? nota5 + nota6 + nota7 : '---'
 
 
 }

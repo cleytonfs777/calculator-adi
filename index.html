@@ -81,7 +81,7 @@
                             mais</button></div>
 
                     <select name="disciplina" id="disciplina" onchange="myFunction('disciplina', 'disc-nota')">
-                        <option value="0" data-default selected></option>
+                        <option value="---" data-default selected></option>
                         <option value="10">Conceito "A"</option>
                         <option value="9">Conceito "B" - Superior a 35 pontos positivos</option>
                         <option value="8">Conceito "B" - 25 pontos a 35 pontos positivos
@@ -95,7 +95,7 @@
                 </div>
                 <div class="saida" style="text-align: center;">
                     <label for="nota">Nota</label>
-                    <h2 class="nota" id="disc-nota">0</h2>
+                    <h2 class="nota" id="disc-nota">---</h2>
                 </div>
             </div>
             <!-- Iniciando as linhas -->
@@ -108,14 +108,14 @@
                             class="button-saiba">Saiba
                             mais</button></div><br>
                     <select name="hab-prof" id="habilidades" onchange="myFunction('habilidades', 'hab-nota')">
-                        <option value="0" data-default selected></option>
+                        <option value="---" data-default selected></option>
                         <option value=" 15">APTO na ADP</option>
                         <option value="3">INAPTO na ADP</option>
                     </select>
                 </div>
                 <div class="saida" style="text-align: center;">
                     <label for="nota">Nota</label>
-                    <h2 class="nota" id="hab-nota">0</h2>
+                    <h2 class="nota" id="hab-nota">---</h2>
                 </div>
             </div>
 
@@ -129,7 +129,7 @@
                             class="button-saiba">Saiba
                             mais</button></div>
                     <select name="disciplina" id="aptidao" onchange="myFunction('aptidao', 'aptidao-nota')">
-                        <option value="0" data-default selected></option>
+                        <option value="---" data-default selected></option>
                         <option value="15">Média final de 9 a 10 pontos</option>
                         <option value="14">Média final de 8 a 8,99 pontos</option>
                         <option value="13">Média final de 7 a 7,99 pontos</option>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="saida" style="text-align: center;">
                     <label for="nota">Nota</label>
-                    <h2 class="nota" id="aptidao-nota">0</h2>
+                    <h2 class="nota" id="aptidao-nota">---</h2>
                 </div>
             </div>
 
@@ -154,7 +154,7 @@
                             mais</button></div>
                     <select name="afastamento" id="disponibilidade"
                         onchange="myFunction('disponibilidade', 'disponibilidade-nota')">
-                        <option value="0" data-default selected></option>
+                        <option value="---" data-default selected></option>
                         <option value="10">Afastamento inexistente</option>
                         <option value="9">Afastamento de 1 até 30 dias</option>
                         <option value="8">Afastamento de 31 até 45 dias</option>
@@ -165,7 +165,7 @@
                 </div>
                 <div class="saida" style="text-align: center;">
                     <label for="nota">Nota</label>
-                    <h2 class="nota" id="disponibilidade-nota">0</h2>
+                    <h2 class="nota" id="disponibilidade-nota">---</h2>
                 </div>
             </div>
 
@@ -207,13 +207,13 @@
                             class="button-saiba">Saiba
                             mais</button></div>
                     <select name="afastamento">
-                        <option value="0" data-default selected>Preenchido automaticamente</option>
+                        <option value="---" data-default selected>Preenchido automaticamente</option>
                     </select>
 
                 </div>
                 <div class="saida" style="text-align: center;">
                     <label for="nota">Nota</label>
-                    <h2 class="nota" id="nota-adp">0</h2>
+                    <h2 class="nota" id="nota-adp">---</h2>
                 </div>
             </div>
             <!-- Iniciando as linhas -->
@@ -226,16 +226,17 @@
                             class="button-saiba">Saiba
                             mais</button></div><br>
                     <select name="conceito" id="conceito" onchange="myFunction('conceito', 'conceito-nota')">
-                        <option value="0" data-default selected></option>
-                        <option value="30">Acima de B24</option>
-                        <option value="25">B0 até B24</option>
-                        <option value="20">B-24 até B-1</option>
-                        <option value="15">B-50 até B-25</option>
+                        <option value="---" data-default selected></option>
+                        <option value="30">Conceito acima de B24</option>
+                        <option value="25">Conceito B0 até B24</option>
+                        <option value="20">Conceito B-24 até B-1</option>
+                        <option value="15">Conceito B-50 até B-25</option>
+                        <option value="0">Conceito C</option>
                     </select>
                 </div>
                 <div class="saida" style="text-align: center;">
                     <label for="nota">Nota</label>
-                    <h2 class="nota" id="conceito-nota">0</h2>
+                    <h2 class="nota" id="conceito-nota">---</h2>
                 </div>
             </div>
 
@@ -249,7 +250,7 @@
                             class="button-saiba">Saiba
                             mais</button></div>
                     <select name="tpb" id="tpb" onchange="myFunction('tpb', 'tpb-nota')">
-                        <option value="0" data-default selected></option>
+                        <option value="---" data-default selected></option>
                         <option value="20">Aptidão nas três provas</option>
                         <option value="15">Aptidão em duas das três provas</option>
                         <option value="10">Aptidão em uma das três provas</option>
@@ -258,7 +259,7 @@
                 </div>
                 <div class="saida" style="text-align: center;">
                     <label for="nota">Nota</label>
-                    <h2 class="nota" id="tpb-nota">0</h2>
+                    <h2 class="nota" id="tpb-nota">---</h2>
                 </div>
             </div>
 
