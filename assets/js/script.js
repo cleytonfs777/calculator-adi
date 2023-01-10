@@ -41,14 +41,11 @@ function myFunction(argument1, argument2){
         finalAdp.innerText = '---'
     }
 
-
     let nota5 = document.getElementById('nota-adp').innerText != '---' ? parseFloat(document.getElementById('nota-adp').innerText) : '---'
     let nota6 = document.getElementById('conceito-nota').innerText != '---' ? parseFloat(document.getElementById('conceito-nota').innerText) : '---'
     let nota7 = document.getElementById('tpb-nota').innerText != '---' ? parseFloat(document.getElementById('tpb-nota').innerText) : '---'
     let item7 = document.getElementById('tpb').selectedIndex
     let item8 = document.getElementById('conceito').selectedIndex
-
-    let arr2 = new Array(nota5, nota6)
 
     if(item7 == 0){
         document.getElementById('tpb-nota').innerText = '---'
@@ -65,9 +62,7 @@ function myFunction(argument1, argument2){
     }else{
         console.log(nota5)
         finalAdi.innerText = nota5 != '---' ? nota5 + nota6 + nota7 : '---'
-    }
-    
-    
+    } 
 
 }
 
