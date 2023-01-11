@@ -110,8 +110,8 @@
                                     mais</button></div>
                             <select name="hab-prof" id="habilidades" onchange="myFunction('habilidades', 'hab-nota')">
                                 <option value="---" data-default selected></option>
-                                <option value=" 15">APTO na ADP</option>
-                                <option value="3">INAPTO na ADP</option>
+                                <option value=" 15">APTO na ATP</option>
+                                <option value="3">INAPTO na ATP</option>
                             </select>
                         </div>
                         <div class="saida" style="text-align: center;">
@@ -173,12 +173,22 @@
                         </div>
                     </div>
 
-
-                    <div class="saida-n">
-                        <h4 class="title-nota">Nota Final AADP: </h4>
-                        <h1 class="nota" id="final-adp">---</h1>
+                    <div class="linha-f">
+                        <div class="soma-aadp">
+                            <h5 style="text-align: center;font-size: 1.4rem;">Pontuação Obtida (AADP):</h5>
+                            <h5 class="resultado-soma-aadp" id="pontuacao-aadp">---</h5>
+                            <div class="title-cas-adi">
+                                <label for="afastamento" id="nivel-aadp" class="form-lab"
+                                    style="text-align: center;">---</label>
+                            </div>
+                        </div>
+                        <div class="saida-n">
+                            <h4 class="title-nota-m" style="font-size: 2.2rem;margin-bottom: .8rem;text-align: center;">
+                                Nota Final AADP:
+                            </h4>
+                            <h2 class="nota" id="final-adp" style="font-size: 4rem;">---</h1>
+                        </div>
                     </div>
-
 
                 </div>
                 <div class="colorf segdiv">
@@ -226,8 +236,8 @@
                             <div class="title-cas">
                                 <label for="disciplina" class="form-lab">Conceito</label>
                             </div>
-                            <div class="linha-sub"><span>Desempenho do militar no TPB</span><button id="modal-conc"
-                                    class="button-saiba">Saiba
+                            <div class="linha-sub"><span>Conceito individual previsto no CEDM</span><button
+                                    id="modal-conc" class="button-saiba">Saiba
                                     mais</button></div>
                             <select name="conceito" id="conceito" onchange="myFunction('conceito', 'conceito-nota')">
                                 <option value="---" data-default selected></option>

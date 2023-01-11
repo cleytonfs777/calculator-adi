@@ -7,38 +7,51 @@ function myFunction(argument1, argument2){
     let notaAdp = document.getElementById('nota-adp')
     let finalAdp = document.getElementById('final-adp')
     let finalAdi = document.getElementById('final-adi')
+    let pontAadp = document.getElementById('pontuacao-aadp')
+    let nivelAadp = document.getElementById('nivel-aadp')
 
     let nota1 = document.getElementById('disc-nota').innerText != '---' ? parseFloat(document.getElementById('disc-nota').innerText) : '---'
     let nota2 = document.getElementById('hab-nota').innerText != '---' ? parseFloat(document.getElementById('hab-nota').innerText) : '---'
     let nota3 = document.getElementById('aptidao-nota').innerText != '---' ? parseFloat(document.getElementById('aptidao-nota').innerText) : '---'
     let nota4 = document.getElementById('disponibilidade-nota').innerText != '---' ? parseFloat(document.getElementById('disponibilidade-nota').innerText) : '---'
 
+
+
     let arri = new Array(nota1, nota2, nota3, nota4)
     if(!arri.includes('---')){
         let aadp1 = (arri[0] + arri[1] + arri[2] + arri[3])*0.2
+        pontAadp.innerText =  aadp1.toFixed(2)
         if(aadp1 >= 9){
             notaAdp.innerText = "50"
             finalAdp.innerText = "50"
+            nivelAadp.innerText = "Nível superior de desempenho"
         }else if(aadp1 >= 7 && aadp1 < 9){
             notaAdp.innerText = "40"
             finalAdp.innerText = "40"
+            nivelAadp.innerText = "Nível alto de desempenho"
         }else if(aadp1 >= 6 && aadp1 < 7){
             notaAdp.innerText = "30"
             finalAdp.innerText = "30"
+            nivelAadp.innerText = "Nível intermediário de desempenho"
         }else if(aadp1 >= 4 && aadp1 < 6){
             notaAdp.innerText = "20"
             finalAdp.innerText = "20"
+            nivelAadp.innerText = "Nível baixo de desempenho"
         }else if(aadp1 >= 1 && aadp1 < 4){
             notaAdp.innerText = "10"
             finalAdp.innerText = "10"
+            nivelAadp.innerText = "Nível inferior de desempenho"
         }else{
             notaAdp.innerText = "---"
             finalAdp.innerText = "---"
+            nivelAadp.innerText = "---"
         }
         
     }else{
         notaAdp.innerText = '---'
         finalAdp.innerText = '---'
+        pontAadp.innerText = '---'
+        nivelAadp.innerText = '---'
     }
 
     let nota5 = document.getElementById('nota-adp').innerText != '---' ? parseFloat(document.getElementById('nota-adp').innerText) : '---'
@@ -78,6 +91,8 @@ function limparAadp(){
     document.getElementById('nota-adp').innerText = '---'
     document.getElementById('final-adp').innerText = '---'
     document.getElementById('final-adi').innerText = '---'
+    document.getElementById('pontuacao-aadp').innerText = '---'
+    document.getElementById('nivel-aadp').innerText = '---'
 
 }
 
