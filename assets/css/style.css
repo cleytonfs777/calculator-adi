@@ -168,6 +168,7 @@ input{
         display: grid;
         grid-template-columns: 1fr!important;
         min-width: 90%;
+
     }
    
     .colorf {
@@ -275,6 +276,8 @@ select {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+
 }
 
 
@@ -369,6 +372,7 @@ button {
 #espaco {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
     justify-content: center;
     background: var(--main-color);
     color: #FFF;
