@@ -222,13 +222,7 @@ input{
     }
 
 @media (max-width: 900px) {
-    .linha-f {
-        display: grid;
-        grid-template-columns: 1fr!important;
-    }
     #wrapper > div.subcont > div > div:nth-child(1) > div.linha-f > div.soma-aadp{
-        border-right: none;
-        border-bottom: 1px solid #000!important;
         padding-bottom: 1rem;
     }
 }
@@ -265,7 +259,7 @@ select {
 }
 h1#final-adp,
 h1#final-adi{
-    font-size: 2rem;
+    font-size: 4.5rem;
 }
 h2#final-adp{
     color:red;
@@ -339,9 +333,6 @@ span {
     width: 80%;
 }
 .linha-f {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
     border: 1px solid var(--primary-color);
     margin: 1rem auto;
     padding: 0.6rem;
@@ -509,7 +500,7 @@ button {
     align-items: center;
 }
 .title-nota {
-    font-size: 2.7rem;
+    font-size: 2rem;
 }
 .linha-sub {
     display: flex;
@@ -544,10 +535,34 @@ body > div.container > div.colorf.segdiv > div.saida-n.segdiv::before{
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid #000;
 }
 .resultado-soma-aadp {
     margin: 1rem auto 1.5rem auto;
-    font-size: 3rem;
+    font-size: 4.5rem;
 
 }
+button#importante {
+    color:red;
+    background: none;
+    border: 1px solid red;
+    padding: 0;
+    width: 10.5rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    
+}
+button#importante:hover{
+    background: red;
+    color: #fff;
+}
+.impor {
+    display: flex;
+    justify-content: center;
+}
+

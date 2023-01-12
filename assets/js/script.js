@@ -5,7 +5,6 @@ function myFunction(argument1, argument2){
     let elem2 = document.getElementById(argument2)
     elem2.innerText = ser
     let notaAdp = document.getElementById('nota-adp')
-    let finalAdp = document.getElementById('final-adp')
     let finalAdi = document.getElementById('final-adi')
     let pontAadp = document.getElementById('pontuacao-aadp')
     let nivelAadp = document.getElementById('nivel-aadp')
@@ -23,33 +22,33 @@ function myFunction(argument1, argument2){
         pontAadp.innerText =  aadp1.toFixed(2)
         if(aadp1 >= 9){
             notaAdp.innerText = "50"
-            finalAdp.innerText = "50"
+
             nivelAadp.innerText = "Nível superior de desempenho"
         }else if(aadp1 >= 7 && aadp1 < 9){
             notaAdp.innerText = "40"
-            finalAdp.innerText = "40"
+
             nivelAadp.innerText = "Nível alto de desempenho"
         }else if(aadp1 >= 6 && aadp1 < 7){
             notaAdp.innerText = "30"
-            finalAdp.innerText = "30"
+
             nivelAadp.innerText = "Nível intermediário de desempenho"
         }else if(aadp1 >= 4 && aadp1 < 6){
             notaAdp.innerText = "20"
-            finalAdp.innerText = "20"
+
             nivelAadp.innerText = "Nível baixo de desempenho"
         }else if(aadp1 >= 1 && aadp1 < 4){
             notaAdp.innerText = "10"
-            finalAdp.innerText = "10"
+
             nivelAadp.innerText = "Nível inferior de desempenho"
         }else{
             notaAdp.innerText = "---"
-            finalAdp.innerText = "---"
+
             nivelAadp.innerText = "---"
         }
         
     }else{
         notaAdp.innerText = '---'
-        finalAdp.innerText = '---'
+
         pontAadp.innerText = '---'
         nivelAadp.innerText = '---'
     }
@@ -89,7 +88,7 @@ function limparAadp(){
     document.getElementById('aptidao-nota').innerText = '---'
     document.getElementById('disponibilidade-nota').innerText = '---'
     document.getElementById('nota-adp').innerText = '---'
-    document.getElementById('final-adp').innerText = '---'
+
     document.getElementById('final-adi').innerText = '---'
     document.getElementById('pontuacao-aadp').innerText = '---'
     document.getElementById('nivel-aadp').innerText = '---'
@@ -116,8 +115,8 @@ const legis = document.querySelector("#modal-legis");
 const contentm = document.querySelector(".modal-content");
 
 
-const modalTitulo = new Array("DISCIPLINA", "HABILIDADES PROFISSIONAIS", "APTIDAO FÍSICA", "DISPONIBILIDADE PARA O TRABALHO", "AADP", "CONCEITO", "TPB")
-const modalLegis = new Array("Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 807/2018")
+const modalTitulo = new Array("DISCIPLINA", "HABILIDADES PROFISSIONAIS", "APTIDAO FÍSICA", "DISPONIBILIDADE PARA O TRABALHO", "AADP", "CONCEITO", "TPB", "PERÍDO DE AVALIAÇÃO")
+const modalLegis = new Array("Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 808/2018")
 
 const modalConteudo0 = "<p>Art. 9º - Para a avaliação da disciplina será utilizado o conceito disciplinar do militar, conforme CEDM.</p>Art. 10 - O conceito disciplinar será aferido em:<br>I - 10 pontos para o conceito 'A'<br>II - 9 pontos para o conceito 'B' com pontuação superior a 35 pontos positivos;<br>III - 8 pontos para o conceito 'B' com pontuação de 25 pontos positivos até 35 pontos positivos;<br>IV - 7 pontos para o conceito 'B' com pontuação positiva até 24 pontos;<br>V - 6 pontos para o conceito 'B' com pontuação de zero ponto;<br>V - 5 pontos para o conceito 'B' com pontuação negativa superior a 25 pontos;<br>VI - 4 pontos para o conceito 'B' com pontuação negativa de 25 pontos, ou menor;<br>VII - 1 ponto para o conceito 'C';</p><p>§ 1º - Para o militar recém incluído no CBMMG, será utilizada a pontuação máxima até que este alcance o conceito 'A”, salvo se for punido disciplinarmente, situação em que se observará a regra estabelecida no caput.</p><p>§ 2º - Para a realização da AADP, o conceito disciplinar será considerado na data prevista no Art. 5º.</p>"
 
@@ -132,6 +131,8 @@ const modalConteudo4 = "<p>Art. 6º - A AADP será regulada em resolução espec
 const modalConteudo5 = "<p>Art. 9º - O conceito individual previsto no CEDM será aferido em:<br> I - 30 pontos para os conceitos 'A' ou 'B' com pontuação igual ou superior a 25;<br>II - 25 pontos para o conceito 'B' com pontuação de zero até 24;<br>III - 20 pontos para o conceito 'B' com pontuação de -24 até -1;<br>IV - 15 pontos para o conceito 'B' com pontuação de -50 até -25;<br>V - zero ponto para o conceito 'C'.</p><p>Parágrafo único - O militar que ingressar no CBMMG e atender as condições para a obtenção do ADE terá seu conceito"
 
 const modalConteudo6 = "<p>Art. 10 - O TPB é a atividade que visa à atualização e o aperfeiçoamento do bombeiro militar, com vistas ao cumprimento de suas missões constitucionais.</p><p>Art. 11 - O TPB compreende o TAF, a ATP e o Tiro Prático, todos executados conforme normas em vigor na Corporação.</p><p>Art. 12 - O TPB, para fins de composição da ADI, será aferido em:I - 20 pontos para aptidão nas três provas;<br>II - 15 pontos para aptidão em duas das três provas;<br>III - 10 pontos para aptidão em uma das três provas;<br>IV - zero ponto para inaptidão em todas as provas.</p>"
+
+const modalConteudo7 = "<p>Art. 5º - A AADP será realizada, anualmente, a partir do mês de julho, sendo que os seus critérios de aferição serão considerados na data de 30 de junho e conforme disposto nesta resolução.</p><p>Parágrafo único - A Unidade/Unidade apoiadora realizará a AADP conforme o seguinte cronograma:<br>I - no mês de julho, para todos os militares cogitados à promoção no ano;<br>II - no mês de julho, para todos os militares com aniversário de inclusão em julho e agosto;<br>III - até o mês de agosto, para todos os militares com aniversário de inclusão em setembro e outubro;<br>IV - até o mês de setembro, para todos os militares com aniversário de inclusão em novembro e dezembro;<br>V - até o mês de outubro, para todos os militares com aniversário de inclusão em janeiro e fevereiro;<br>VI - até o mês de novembro, para todos os militares com aniversário de inclusão em março e abril;<br>VII - até o mês de dezembro, para todos os militares com aniversário de inclusão em maio e junho.</p>"
 
 const toggleModal = () => {
     [modaly, hiddido].forEach((el)=>el.classList.toggle("hide"));
@@ -169,6 +170,11 @@ const toggleModal = () => {
             title.innerText = modalTitulo[6]
             legis.innerText = modalLegis[6]
             contentm.innerHTML = modalConteudo6
+        } else if(el.id == 'importante'){
+            console.log("Clicou importante")
+            title.innerText = modalTitulo[7]
+            legis.innerText = modalLegis[7]
+            contentm.innerHTML = modalConteudo7
         }
         toggleModal()
 
@@ -205,6 +211,11 @@ openModalButton.forEach((el) => {
             title.innerText = modalTitulo[6]
             legis.innerText = modalLegis[6]
             contentm.innerHTML = modalConteudo6
+        } else if(el.id == 'importante'){
+            console.log("Clicou importante")
+            title.innerText = modalTitulo[7]
+            legis.innerText = modalLegis[7]
+            contentm.innerHTML = modalConteudo7
         }
         toggleModal()
     });
