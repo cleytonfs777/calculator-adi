@@ -1,4 +1,15 @@
+window.onload = function() {
+    document.getElementById('nenhum').checked = true
+    title.innerText = "ATENÇÃO"
+    title.classList.add('text-danger')
+    legis.innerText = "Aviso Importante"
+    legis.classList.add('text-danger')
+    contentm.innerHTML = "Esta calculadora não abrange todos os casos de aferição de AADP e ADI, não substituindo a consulta às legislações específicas, Resolução nº 807/2018 e Resolução nº 808/2018, especialmente no que tange aos casos especiais e específicos"
+    toggleModal()
+}
+
 function myFunction(argument1, argument2){
+
     
     let elem1 = document.getElementById(argument1)
     let ser = elem1.value
@@ -78,6 +89,33 @@ function myFunction(argument1, argument2){
 
 }
 
+const adiDate = document.querySelector("div.linha:nth-child(2) > div:nth-child(2) > label:nth-child(1)")
+const date = new Date();
+const currentYear = date.getFullYear();
+
+
+function labelAdiDate(){
+    // Vefifica qual é o valor da data de inclusão
+    let data = document.getElementById('1data').checked
+    let data1 = document.getElementById('2data').checked
+    let data2 = document.getElementById('nenhum').checked
+
+    // Verifica qual é o valor do campo Ano da ADI
+    let sano = document.getElementById('ano-adi').value
+
+    if(data){
+        msg = `Para calculo considere a ADI do ano de <span class="destac-span">${sano}</span> e a AADP do ano de <span class="destac-span">${sano - 1}</span>`
+    }else if(data1){
+        msg = `Para calculo considere a ADI do ano de <span class="destac-span">${sano}</span> e a AADP do ano de <span class="destac-span">${sano}</span>`
+    }else{
+        msg = "---"
+    }
+
+    adiDate.innerHTML = msg
+    
+}
+
+
 function limparAadp(){
     document.getElementById('disciplina').value = '---'
     document.getElementById('habilidades').value = '---'
@@ -101,6 +139,13 @@ function limparAdi(){
     document.getElementById('final-adi').innerText = '---'
     document.getElementById('conceito-nota').innerText = '---'
     document.getElementById('tpb-nota').innerText = '---'
+    document.getElementById('nenhum').checked = true
+    adiDate.innerText =  '---'
+    console.log(currentYear); //2022
+    document.getElementById('ano-adi').value = currentYear
+
+    // document.getElementById('ano-adi').value = currentYear
+
 }
 
 // FUNÇAO DAS MODAIS
@@ -115,24 +160,29 @@ const legis = document.querySelector("#modal-legis");
 const contentm = document.querySelector(".modal-content");
 
 
-const modalTitulo = new Array("DISCIPLINA", "HABILIDADES PROFISSIONAIS", "APTIDAO FÍSICA", "DISPONIBILIDADE PARA O TRABALHO", "AADP", "CONCEITO", "TPB", "PERÍODO DE AVALIAÇÃO")
-const modalLegis = new Array("Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 808/2018")
+const modalTitulo = new Array("DISCIPLINA", "HABILIDADES PROFISSIONAIS", "APTIDAO FÍSICA", "DISPONIBILIDADE PARA O TRABALHO", "AADP", "CONCEITO", "TPB", "PERÍODO DE AVALIAÇÃO", "DATA DE INCLUSÃO PARA APURAÇÃO DA ADI","REGRAS PARA 1ª AADP E ADI DOS MILITARES DESIGNADOS PARA O SERVIÇO ATIVO")
+const modalLegis = new Array("Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 808/2018")
 
 const modalConteudo0 = "<p>Art. 9º - Para a avaliação da disciplina será utilizado o conceito disciplinar do militar, conforme CEDM.</p>Art. 10 - O conceito disciplinar será aferido em:<br>I - 10 pontos para o conceito 'A'<br>II - 9 pontos para o conceito 'B' com pontuação superior a 35 pontos positivos;<br>III - 8 pontos para o conceito 'B' com pontuação de 25 pontos positivos até 35 pontos positivos;<br>IV - 7 pontos para o conceito 'B' com pontuação positiva até 24 pontos;<br>V - 6 pontos para o conceito 'B' com pontuação de zero ponto;<br>V - 5 pontos para o conceito 'B' com pontuação negativa superior a 25 pontos;<br>VI - 4 pontos para o conceito 'B' com pontuação negativa de 25 pontos, ou menor;<br>VII - 1 ponto para o conceito 'C';</p><p>§ 1º - Para o militar recém incluído no CBMMG, será utilizada a pontuação máxima até que este alcance o conceito 'A”, salvo se for punido disciplinarmente, situação em que se observará a regra estabelecida no caput.</p><p>§ 2º - Para a realização da AADP, o conceito disciplinar será considerado na data prevista no Art. 5º.</p>"
 
-const modalConteudo1 = "<p>Art. 11 - A aferição das habilidades profissionais terá como referência a ATP, que tem execução disciplinada em resolução específica.</p><p>Parágrafo único - O resultado da ATP será utilizado na AADP da seguinte forma:<br>I - 15 pontos para o militar apto;<br>II - 3 pontos para o militar inapto.</p>"
+const modalConteudo1 = "<p>Art. 11 - A aferição das habilidades profissionais terá como referência a ATP, que tem execução disciplinada em resolução específica.</p><p>Parágrafo único - O resultado da ATP será utilizado na AADP da seguinte forma:<br>I - 15 pontos para o militar apto;<br>II - 3 pontos para o militar inapto.</p><p>Art. 12 - Para a realização da AADP, será utilizada a ATP feita no ano anterior </p>"
 
 const modalConteudo2 = "<p>Art. 16 - A aferição da aptidão física terá como referência o TAF, que tem execução disciplinada em resolução específica.</p><p>Parágrafo único - O resultado do TAF será utilizado na AADP da seguinte forma:<br>I - 15 pontos para média final de 9 a 10 pontos;<br>II - 14 pontos para média final de 8 a 8,99 pontos;<br>III - 13 pontos para média final de 7 a 7,99 pontos;<br>IV - 12 pontos para média final de 6 a 6,99 pontos;<br>V - 3 pontos para média final inferior a 6 pontos.</p><p>Art. 17 - Para a realização da AADP, será utilizado o TAF feito no ano anterior.</p>"
 
-const modalConteudo3 = "<p>Art. 19 - A disponibilidade para o trabalho será apurada no período de 12 meses anteriores ao dia 1º de julho de cada ano.</p><p>Parágrafo único - A disponibilidade para o serviço será pontuada da seguinte forma:<br>I - 10 pontos para afastamento inexistente;<br>II - 9 pontos para afastamento de 1 até 30 dias;<br>III - 8 pontos para afastamento de 31 até 45 dias;<br>IV - 7 pontos para afastamento de 46 até 60 dias;<br>V - 5 pontos para afastamento de 61 até 90 dias;<br>VI - 3 pontos para afastamento acima<p>Art. 20 - Os seguintes dias de afastamento serão considerados como efetivamente trabalhados na contagem de disponibilidade para o serviço:<br>I - férias anuais;<br>II - férias prêmio;<br>III - licença maternidade ou paternidade;<br>IV - licença saúde até 30 dias;<br>V - dispensa de serviço: núpcias, luto, Programa de Preparação para a Reserva,doação de sangue, trânsito e instalação e aquelas decorrentes da Lei nº 14.310/2002;VI - licença por motivo de doença em pessoa da família até 30 dias.</p><p>Parágrafo único - Ao militar com licença saúde que estiver amparado em Atestado de Origem (AO) não se aplica o limite de tempo previsto no inciso IV.</p>"
+const modalConteudo3 = "<p>Art. 19 - A disponibilidade para o trabalho será apurada no período de 12 meses anteriores ao dia 1º de julho de cada ano.</p><p>Parágrafo único - A disponibilidade para o serviço será pontuada da seguinte forma:<br>I - 10 pontos para afastamento inexistente;<br>II - 9 pontos para afastamento de 1 até 30 dias;<br>III - 8 pontos para afastamento de 31 até 45 dias;<br>IV - 7 pontos para afastamento de 46 até 60 dias;<br>V - 5 pontos para afastamento de 61 até 90 dias;<br>VI - 3 pontos para afastamento acima de 90 dias.<p>Art. 20 - Os seguintes dias de afastamento serão considerados como efetivamente trabalhados na contagem de disponibilidade para o serviço:<br>I - férias anuais;<br>II - férias prêmio;<br>III - licença maternidade ou paternidade;<br>IV - licença saúde até 30 dias;<br>V - dispensa de serviço: núpcias, luto, Programa de Preparação para a Reserva,doação de sangue, trânsito e instalação e aquelas decorrentes da Lei nº 14.310/2002;VI - licença por motivo de doença em pessoa da família até 30 dias.</p><p>Parágrafo único - Ao militar com licença saúde que estiver amparado em Atestado de Origem (AO) não se aplica o limite de tempo previsto no inciso IV.</p>"
 
 const modalConteudo4 = "<p>Art. 6º - A AADP será regulada em resolução específica e a pontuação nela obtida corresponderá aos seguintes níveis de desempenho:<br>I - pontuação de 9 até 10 pontos, inclusive: nível superior de desempenho;<br>II - pontuação de 7 até 8,99 pontos, inclusive: nível alto de desempenho;<br>III - pontuação de 6,00 até 6,99 pontos, inclusive: nível intermediário de desempenho;<br>IV - pontuação de 4,00 até 5,99 pontos, inclusive: nível baixo de desempenho;<br>V - pontuação de 1,0 até 3,99 pontos, inclusive: nível inferior de desempenho.</p><p>Art. 7º - Os níveis de desempenho, obtidos nos termos do artigo anterior, corresponderão à pontuação a seguir estabelecida, a qual será somada aos demais fatores da ADI, nos termos do Art. 4º:<br>I - 50 pontos para o nível superior de desempenho;<br>II - 40 pontos para o nível alto de desempenho;<br>III - 30 pontos para o nível intermediário de desempenho;<br>IV - 20 pontos para o nível baixo de desempenho;<br>V - 10 pontos para o nível inferior de desempenho.</p>"
 
-const modalConteudo5 = "<p>Art. 9º - O conceito individual previsto no CEDM será aferido em:<br> I - 30 pontos para os conceitos 'A' ou 'B' com pontuação igual ou superior a 25;<br>II - 25 pontos para o conceito 'B' com pontuação de zero até 24;<br>III - 20 pontos para o conceito 'B' com pontuação de -24 até -1;<br>IV - 15 pontos para o conceito 'B' com pontuação de -50 até -25;<br>V - zero ponto para o conceito 'C'.</p><p>Parágrafo único - O militar que ingressar no CBMMG e atender as condições para a obtenção do ADE terá seu conceito"
+const modalConteudo5 = "<p>Art. 9º - O conceito individual previsto no CEDM será aferido em:<br> I - 30 pontos para os conceitos 'A' ou 'B' com pontuação igual ou superior a 25;<br>II - 25 pontos para o conceito 'B' com pontuação de zero até 24;<br>III - 20 pontos para o conceito 'B' com pontuação de -24 até -1;<br>IV - 15 pontos para o conceito 'B' com pontuação de -50 até -25;<br>V - zero ponto para o conceito 'C'.</p><p>Parágrafo único - O militar que ingressar no CBMMG e atender as condições para a obtenção do ADE terá seu conceito disciplinar considerado em grau máximo nos três primeiros anos, salvo se for punido disciplinarmente, situação em que adotar-se-á a regra definida no caput.</p><p>Art. 36 - Para apuração da ADI, os fatores de avaliação serão utilizados da seguinte forma:</p><p>...</p><p>II - o conceito disciplinar será considerado aquele existente no último dia do período avaliatório;</p>"
 
-const modalConteudo6 = "<p>Art. 10 - O TPB é a atividade que visa à atualização e o aperfeiçoamento do bombeiro militar, com vistas ao cumprimento de suas missões constitucionais.</p><p>Art. 11 - O TPB compreende o TAF, a ATP e o Tiro Prático, todos executados conforme normas em vigor na Corporação.</p><p>Art. 12 - O TPB, para fins de composição da ADI, será aferido em:I - 20 pontos para aptidão nas três provas;<br>II - 15 pontos para aptidão em duas das três provas;<br>III - 10 pontos para aptidão em uma das três provas;<br>IV - zero ponto para inaptidão em todas as provas.</p>"
+const modalConteudo6 = "<p>Art. 10 - O TPB é a atividade que visa à atualização e o aperfeiçoamento do bombeiro militar, com vistas ao cumprimento de suas missões constitucionais.</p><p>Art. 11 - O TPB compreende o TAF, a ATP e o Tiro Prático, todos executados conforme normas em vigor na Corporação.</p><p>Art. 12 - O TPB, para fins de composição da ADI, será aferido em:I - 20 pontos para aptidão nas três provas;<br>II - 15 pontos para aptidão em duas das três provas;<br>III - 10 pontos para aptidão em uma das três provas;<br>IV - zero ponto para inaptidão em todas as provas.</p><p>Art. 36 - Para apuração da ADI, os fatores de avaliação serão utilizados da seguinte forma:</p><p>...</p><p> III - para as provas do TPB, na apuração da pontuação prevista no art. 12, será observada a aptidão em cada uma das provas previstas no art. 11, da seguinte forma: </p><p>a) TAF e ATP realizados no ano de início do período avaliatório para a execução da ADI ou, na sua falta, no ano anterior; </p><p>b) Tiro prático válido no ano de execução da ADI.</p>"
 
 const modalConteudo7 = "<p>Art. 5º - A AADP será realizada, anualmente, a partir do mês de julho, sendo que os seus critérios de aferição serão considerados na data de 30 de junho e conforme disposto nesta resolução.</p><p>Parágrafo único - A Unidade/Unidade apoiadora realizará a AADP conforme o seguinte cronograma:<br>I - no mês de julho, para todos os militares cogitados à promoção no ano;<br>II - no mês de julho, para todos os militares com aniversário de inclusão em julho e agosto;<br>III - até o mês de agosto, para todos os militares com aniversário de inclusão em setembro e outubro;<br>IV - até o mês de setembro, para todos os militares com aniversário de inclusão em novembro e dezembro;<br>V - até o mês de outubro, para todos os militares com aniversário de inclusão em janeiro e fevereiro;<br>VI - até o mês de novembro, para todos os militares com aniversário de inclusão em março e abril;<br>VII - até o mês de dezembro, para todos os militares com aniversário de inclusão em maio e junho.</p>"
+
+const modalConteudo8 = "<p>Art. 36 - Para apuração da ADI, os fatores de avaliação serão utilizados da seguinte forma: </p><p>I - a AADP será aquela realizada no ano de confecção da ADI, para militares incluídos a partir de 1º de julho ou aquela realizada no ano anterior, para militares incluídos até 30 de junho</p>"
+
+const modalConteudo9 = "<p>Art. 29-A - A primeira AADP para os militares designados para o serviço ativo, oriundos de todos os quadros, será referenciada como AADP do ano da designação e será observado:</p><p>I - se a designação ocorrer até 30 de junho, a AADP será confeccionada observando o mesmo período de confecção da ADI;</p><p>II - se a designação ocorrer, após 30 de junho, a AADP será confeccionada observando o período da data da designação até a data de 30 de junho;</p><p>III - para o TAF e a ATP, será observada a prova executada dentro dos períodos listados nos incisos anteriores.</p><p>Parágrafo único. As demais AADP serão feitas conforme prazos e critérios previstos nesta resolução, utilizando os resultados do TAF e da ATP do ano anterior,independente se já foram utilizados na AADP do ano da designação.</p><br><h3 style='text-align:left;'>Resolução 807/2018</h3><p>Art. 36:</p><p>§ 2º - Para os militares designados para o serviço ativo será observado para a primeira ADI a ser realizada:</p><p>I - se a designação ocorrer até 30 de junho do ano em curso, será utilizada a AADP confeccionada, considerando o mesmo período de confecção da ADI.</p><p>II - se a designação ocorrer após 30 de junho do ano em curso, será utilizada a AADP feita considerando o período da data da designação até a data de 30 de junho.</p><p>III - na falta de alguma das provas do TPB, poderá ser utilizada a prova executada no ano anterior ao último ano de efetivo serviço do militar quando na ativa ou quando de sua última designação</p>"
+
 
 const toggleModal = () => {
     [modaly, hiddido].forEach((el)=>el.classList.toggle("hide"));
@@ -141,6 +191,8 @@ const toggleModal = () => {
 
 [closeModalButton, hiddido].forEach((el) => {
     el.addEventListener("click", ()=>{
+        legis.classList.remove('text-danger')
+        title.classList.remove('text-danger')
         //Primeiro botao saiba mais
         if(el.id == 'modal-disc'){
             title.innerText = modalTitulo[0]
@@ -175,6 +227,14 @@ const toggleModal = () => {
             title.innerText = modalTitulo[7]
             legis.innerText = modalLegis[7]
             contentm.innerHTML = modalConteudo7
+        } else if(el.id == 'modal-anoadi'){
+            title.innerText = modalTitulo[8]
+            legis.innerText = modalLegis[8]
+            contentm.innerHTML = modalConteudo8
+        } else if(el.id == 'prim-adi'){
+            title.innerText = modalTitulo[9]
+            legis.innerText = modalLegis[9]
+            contentm.innerHTML = modalConteudo9
         }
         toggleModal()
 
@@ -216,6 +276,14 @@ openModalButton.forEach((el) => {
             title.innerText = modalTitulo[7]
             legis.innerText = modalLegis[7]
             contentm.innerHTML = modalConteudo7
+        } else if(el.id == 'modal-anoadi'){
+            title.innerText = modalTitulo[8]
+            legis.innerText = modalLegis[8]
+            contentm.innerHTML = modalConteudo8
+        } else if(el.id == 'prim-adi'){
+            title.innerText = modalTitulo[9]
+            legis.innerText = modalLegis[9]
+            contentm.innerHTML = modalConteudo9
         }
         toggleModal()
     });

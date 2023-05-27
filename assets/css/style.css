@@ -225,10 +225,15 @@ input{
     #wrapper > div.subcont > div > div:nth-child(1) > div.linha-f > div.soma-aadp{
         padding-bottom: 1rem;
     }
+    .dual-box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 }
 @media (max-width: 600px) {
+
     .container {
         background: var(--backgroundn-color);
         margin:0 auto;
@@ -246,8 +251,10 @@ input{
         font-size: 1.1rem;
     }
 
+
 }
 @media (max-width: 380px) {
+
 .main-cab h2 {
     font-size: 1.8rem;
 }
@@ -566,3 +573,61 @@ button#importante:hover{
     justify-content: center;
 }
 
+.dual-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    margin: 1rem 0;
+}
+.saiba-pos {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-top: 1rem;
+}
+label.minus {
+    font-weight: normal;
+}
+label.title-ajust{
+    margin-top: 2rem;
+}
+#div-nenhum {
+    display: none;
+}
+span.destac-span{
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+button#prim-adi {
+    color:red;
+    background: none;
+    border: 1px solid red;
+    padding: 1rem; 
+    width: 80%;
+    height: 2rem; 
+    font-size: 1.2rem;
+    border-radius: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+button#prim-adi:hover{
+    background: red;
+    color: #fff;
+}
+
+.all-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+.text-danger {
+    color: red;
+}
