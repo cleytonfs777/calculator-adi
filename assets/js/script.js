@@ -160,8 +160,8 @@ const legis = document.querySelector("#modal-legis");
 const contentm = document.querySelector(".modal-content");
 
 
-const modalTitulo = new Array("DISCIPLINA", "HABILIDADES PROFISSIONAIS", "APTIDAO FÍSICA", "DISPONIBILIDADE PARA O TRABALHO", "AADP", "CONCEITO", "TPB", "PERÍODO DE AVALIAÇÃO", "DATA DE INCLUSÃO PARA APURAÇÃO DA ADI","REGRAS PARA 1ª AADP E ADI DOS MILITARES DESIGNADOS PARA O SERVIÇO ATIVO")
-const modalLegis = new Array("Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 808/2018")
+const modalTitulo = new Array("DISCIPLINA", "HABILIDADES PROFISSIONAIS", "APTIDAO FÍSICA", "DISPONIBILIDADE PARA O TRABALHO", "AADP", "CONCEITO", "TPB", "PERÍODO DE AVALIAÇÃO", "DATA DE INCLUSÃO PARA APURAÇÃO DA ADI","REGRAS PARA 1ª AADP E ADI DOS MILITARES DESIGNADOS PARA O SERVIÇO ATIVO", "VIDEO TUTORIAL")
+const modalLegis = new Array("Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 807/2018", "Resolução 808/2018", "Resolução 807/2018", "Resolução 808/2018","Como utilizar a calculadora")
 
 const modalConteudo0 = "<p>Art. 9º - Para a avaliação da disciplina será utilizado o conceito disciplinar do militar, conforme CEDM.</p>Art. 10 - O conceito disciplinar será aferido em:<br>I - 10 pontos para o conceito 'A'<br>II - 9 pontos para o conceito 'B' com pontuação superior a 35 pontos positivos;<br>III - 8 pontos para o conceito 'B' com pontuação de 25 pontos positivos até 35 pontos positivos;<br>IV - 7 pontos para o conceito 'B' com pontuação positiva até 24 pontos;<br>V - 6 pontos para o conceito 'B' com pontuação de zero ponto;<br>V - 5 pontos para o conceito 'B' com pontuação negativa superior a 25 pontos;<br>VI - 4 pontos para o conceito 'B' com pontuação negativa de 25 pontos, ou menor;<br>VII - 1 ponto para o conceito 'C';</p><p>§ 1º - Para o militar recém incluído no CBMMG, será utilizada a pontuação máxima até que este alcance o conceito 'A”, salvo se for punido disciplinarmente, situação em que se observará a regra estabelecida no caput.</p><p>§ 2º - Para a realização da AADP, o conceito disciplinar será considerado na data prevista no Art. 5º.</p>"
 
@@ -183,6 +183,7 @@ const modalConteudo8 = "<p>Art. 36 - Para apuração da ADI, os fatores de avali
 
 const modalConteudo9 = "<p>Art. 29-A - A primeira AADP para os militares designados para o serviço ativo, oriundos de todos os quadros, será referenciada como AADP do ano da designação e será observado:</p><p>I - se a designação ocorrer até 30 de junho, a AADP será confeccionada observando o mesmo período de confecção da ADI;</p><p>II - se a designação ocorrer, após 30 de junho, a AADP será confeccionada observando o período da data da designação até a data de 30 de junho;</p><p>III - para o TAF e a ATP, será observada a prova executada dentro dos períodos listados nos incisos anteriores.</p><p>Parágrafo único. As demais AADP serão feitas conforme prazos e critérios previstos nesta resolução, utilizando os resultados do TAF e da ATP do ano anterior,independente se já foram utilizados na AADP do ano da designação.</p><br><h3 style='text-align:left;'>Resolução 807/2018</h3><p>Art. 36:</p><p>§ 2º - Para os militares designados para o serviço ativo será observado para a primeira ADI a ser realizada:</p><p>I - se a designação ocorrer até 30 de junho do ano em curso, será utilizada a AADP confeccionada, considerando o mesmo período de confecção da ADI.</p><p>II - se a designação ocorrer após 30 de junho do ano em curso, será utilizada a AADP feita considerando o período da data da designação até a data de 30 de junho.</p><p>III - na falta de alguma das provas do TPB, poderá ser utilizada a prova executada no ano anterior ao último ano de efetivo serviço do militar quando na ativa ou quando de sua última designação</p>"
 
+const modalConteudo10 = '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/LP91qYlrP5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>';
 
 const toggleModal = () => {
     [modaly, hiddido].forEach((el)=>el.classList.toggle("hide"));
@@ -237,6 +238,10 @@ const toggleModal = () => {
             contentm.innerHTML = modalConteudo9
         }
         toggleModal()
+        const iframe = document.querySelector('.embed-responsive-item');
+        const videoSrc = iframe.src;
+        iframe.src = '';
+        iframe.src = videoSrc;
 
     });
 });
@@ -284,6 +289,10 @@ openModalButton.forEach((el) => {
             title.innerText = modalTitulo[9]
             legis.innerText = modalLegis[9]
             contentm.innerHTML = modalConteudo9
+        }else if(el.id == 'modal-tutorial'){
+            title.innerText = modalTitulo[10]
+            legis.innerText = modalLegis[10]
+            contentm.innerHTML = modalConteudo10
         }
         toggleModal()
     });
