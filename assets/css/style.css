@@ -284,6 +284,11 @@ input{
         font-size: 1.1rem;
     }
 
+    button#prim-adi, button#infocomp {
+        width: 90%!important;;
+        padding: 0;
+    }
+
 
 }
 @media (max-width: 380px) {
@@ -523,7 +528,7 @@ button {
 .modal-content p {
     text-align: justify;
 }
-.title-cas {
+.title-cas, .title-cas-calc {
     background-image: linear-gradient(to bottom right, rgba(248, 135, 135, 0.705), white);
     border-radius: 1rem;
     padding-left: 1rem;
@@ -630,10 +635,12 @@ label.title-ajust{
 span.destac-span{
     color: red;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    border-bottom: 2px solid red;
 }
 
-button#prim-adi {
+
+button#prim-adi, button#infocomp {
     color:red;
     background: none;
     border: 1px solid red;
@@ -650,9 +657,14 @@ button#prim-adi {
     margin-bottom: 1rem;
 }
 
-button#prim-adi:hover{
+button#prim-adi:hover, button#infocomp:hover{
     background: red;
     color: #fff;
+}
+button#infocomp {
+    margin: 0;
+    padding: 0;
+    width: 70%;
 }
 
 .all-box {
@@ -681,6 +693,29 @@ button#prim-adi:hover{
 }
 
 label.lg-label {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: bold;
+}
+
+.title-cas-calc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-cas-calc label {
+    font-size: 2rem;
+}
+
+.linha-sub-calc {
+    width: 100%;
+    min-height: 10rem;
+    padding: 1rem;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.hidden-content {
+    display: none;
 }

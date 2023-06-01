@@ -8,6 +8,11 @@ window.onload = function() {
     toggleModal()
 }
 
+function mostraHiddenContent(){
+    let elem = document.querySelector('#calContent')
+    elem.classList.remove('hidden-content')
+}
+
 function myFunction(argument1, argument2){
 
     
@@ -89,7 +94,7 @@ function myFunction(argument1, argument2){
 
 }
 
-const adiDate = document.querySelector("div.linha:nth-child(2) > div:nth-child(2) > label:nth-child(1)")
+const adiDate = document.querySelector("#modal > div.modal-body > div.calc-content.hidden-content > div > div.saida > label")
 const date = new Date();
 const currentYear = date.getFullYear();
 
@@ -158,6 +163,9 @@ const hiddido = document.querySelector("#fade");
 const title = document.querySelector("#modal-title");
 const legis = document.querySelector("#modal-legis");
 const contentm = document.querySelector(".modal-content");
+const elemHidden = document.querySelector('#calContent')
+
+
 
 
 const modalTitulo = new Array("DISCIPLINA", "HABILIDADES PROFISSIONAIS", "APTIDAO FÍSICA", "DISPONIBILIDADE PARA O TRABALHO", "AADP", "CONCEITO", "TPB", "PERÍODO DE AVALIAÇÃO", "DATA DE INCLUSÃO PARA APURAÇÃO DA ADI","REGRAS PARA 1ª AADP E ADI DOS MILITARES DESIGNADOS PARA O SERVIÇO ATIVO", "VIDEO TUTORIAL")
@@ -185,6 +193,8 @@ const modalConteudo9 = "<p>Art. 29-A - A primeira AADP para os militares designa
 
 const modalConteudo10 = '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/LP91qYlrP5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>';
 
+const calcInclusao = ''
+
 const toggleModal = () => {
     [modaly, hiddido].forEach((el)=>el.classList.toggle("hide"));
 }
@@ -194,6 +204,7 @@ const toggleModal = () => {
     el.addEventListener("click", ()=>{
         legis.classList.remove('text-danger')
         title.classList.remove('text-danger')
+        elemHidden.classList.add('hidden-content')
         //Primeiro botao saiba mais
         if(el.id == 'modal-disc'){
             title.innerText = modalTitulo[0]
@@ -228,7 +239,7 @@ const toggleModal = () => {
             title.innerText = modalTitulo[7]
             legis.innerText = modalLegis[7]
             contentm.innerHTML = modalConteudo7
-        } else if(el.id == 'modal-anoadi'){
+        } else if(el.id == 'infocomp'){
             title.innerText = modalTitulo[8]
             legis.innerText = modalLegis[8]
             contentm.innerHTML = modalConteudo8
@@ -281,7 +292,7 @@ openModalButton.forEach((el) => {
             title.innerText = modalTitulo[7]
             legis.innerText = modalLegis[7]
             contentm.innerHTML = modalConteudo7
-        } else if(el.id == 'modal-anoadi'){
+        } else if(el.id == 'infocomp'){
             title.innerText = modalTitulo[8]
             legis.innerText = modalLegis[8]
             contentm.innerHTML = modalConteudo8
