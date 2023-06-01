@@ -630,7 +630,7 @@ label.title-ajust{
 span.destac-span{
     color: red;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 button#prim-adi {
@@ -678,4 +678,9 @@ button#prim-adi:hover{
 }
 .flex-content label {
     margin-left: 1rem;
+}
+
+label.lg-label {
+    font-size: 1.6rem;
+    font-weight: bold;
 }
