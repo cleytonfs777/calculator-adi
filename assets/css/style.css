@@ -457,6 +457,8 @@ button {
     border: none;
     color: var(--primary-color);
     background: var(--white-color);
+    white-space: nowrap;
+
 }
 
 #fade,
@@ -526,7 +528,7 @@ button {
 }
 
 .modal-content p {
-    text-align: justify;
+    text-align: justify!important;
 }
 .title-cas, .title-cas-calc {
     background-image: linear-gradient(to bottom right, rgba(248, 135, 135, 0.705), white);
@@ -550,6 +552,7 @@ button {
 .linha-sub {
     display: flex;
     justify-content: space-between;
+    align-items: top;    
     margin-top: 1rem;
 }
 .author {
@@ -718,4 +721,9 @@ label.lg-label {
 
 .hidden-content {
     display: none;
+}
+
+h4.main-h4 {
+    color:red;
+    margin-bottom: 0;
 }

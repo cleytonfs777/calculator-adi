@@ -25,13 +25,14 @@
     <div id="fade" class="hide"></div>
     <div id="modal" class="hide">
         <div class="modal-header">
-            <h2 id="modal-title">Este é o Modal</h2>
+            <h2 id="modal-title">Este é o Teste</h2>
             <button id="close-modal">Fechar</button>
         </div>
         <div class="modal-body">
             <h3 id="modal-legis">Legis</h3>
             <div class="modal-content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ipsa iusto
+                <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+                    ipsa iusto
                     eveniet veniam eos id magni neque dolor ea optio enim debitis culpa distinctio
                     perferendis quis pariatur error dolorem. Cum.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore eum hic obcaecati
@@ -73,22 +74,6 @@
                             <div class="col">
                                 <label for="ano-adi" style="margin-bottom: .8rem;">Ano da ADI</label>
                                 <select name="ano-adi" id="ano-adi" class="title-ajust">
-                                    <option value="2003">2003</option>
-                                    <option value="2004">2004</option>
-                                    <option value="2005">2005</option>
-                                    <option value="2006">2006</option>
-                                    <option value="2007">2007</option>
-                                    <option value="2008">2008</option>
-                                    <option value="2009">2009</option>
-                                    <option value="2010">2010</option>
-                                    <option value="2011">2011</option>
-                                    <option value="2012">2012</option>
-                                    <option value="2013">2013</option>
-                                    <option value="2014">2014</option>
-                                    <option value="2015">2015</option>
-                                    <option value="2016">2016</option>
-                                    <option value="2017">2017</option>
-                                    <option value="2018">2018</option>
                                     <option value="2019">2019</option>
                                     <option value="2020">2020</option>
                                     <option value="2021">2021</option>
@@ -192,7 +177,14 @@
                                 <label for="disciplina" class="form-lab">DISCIPLINA</label>
                             </div>
                             <div class="linha-sub">
-                                <span>Conceito disciplinar do militar</span>
+                                <span><strong>Conceito disciplinar do militar</strong>
+                                    <p style="margin:1rem auto;line-height:2rem;text-align: justify;">Aqui será
+                                        preenchido o Conceito que o
+                                        militar possuía
+                                        na data de 30 de junho.
+                                        Para
+                                        maiores informações clique ao lado em <b>"Saiba mais"</b> </p>
+                                </span>
                                 <button id="modal-disc" class="button-saiba">
                                     Saiba mais
                                 </button>
@@ -222,9 +214,14 @@
                             <div class="title-cas">
                                 <label for="hab-prof" class="form-lab">Habilidades Profissionais</label>
                             </div>
-                            <div class="linha-sub"><span>Desempenho na ATP</span><button id="modal-hab"
-                                    class="button-saiba">Saiba
-                                    mais</button></div>
+                            <div class="linha-sub">
+                                <span><strong>Desempenho na ATP</strong>
+                                    <p style="margin:1rem auto;line-height:2rem;text-align: justify;">Aqui será
+                                        preenchido a ATP feita no ano
+                                        anterior. Para maiores informações clique ao lado em <b>"Saiba mais"</b> </p>
+                                </span>
+                                <button id="modal-hab" class="button-saiba">Saiba mais</button>
+                            </div>
                             <select name="hab-prof" id="habilidades" onchange="myFunction('habilidades', 'hab-nota')">
                                 <option value="---" data-default selected></option>
                                 <option value=" 15">APTO na ATP</option>
@@ -243,9 +240,15 @@
                             <div class="title-cas">
                                 <label for="disciplina" class="form-lab">Aptidao física</label>
                             </div>
-                            <div class="linha-sub"><span>Média final do TAF</span><button id="modal-apt"
-                                    class="button-saiba">Saiba
-                                    mais</button></div>
+                            <div class="linha-sub">
+                                <span><strong>Média final do TAF</strong>
+                                    <p style="margin:1rem auto;line-height:2rem;text-align: justify;">Aqui será
+                                        preenchido a nota do TAF
+                                        feito no ano anterior. Para maiores informações clique ao lado em <b>"Saiba
+                                            mais"</b> </p>
+                                </span>
+                                <button id="modal-apt" class="button-saiba">Saiba mais</button>
+                            </div>
                             <select name="disciplina" id="aptidao" onchange="myFunction('aptidao', 'aptidao-nota')">
                                 <option value="---" data-default selected></option>
                                 <option value="15">Média final de 9 a 10 pontos</option>
@@ -267,9 +270,17 @@
                             <div class="title-cas">
                                 <label for="afastamento" class="form-lab">Disponibilidade para o trabalho</label>
                             </div>
-                            <div class="linha-sub"><span>Dias de afastamento do serviço</span><button id="modal-disp"
-                                    class="button-saiba">Saiba
-                                    mais</button></div>
+                            <div class="linha-sub">
+                                <span><strong>Dias de afastamento do serviço</strong>
+                                    <p style="margin:1rem auto;line-height:2rem;text-align: justify;">Aqui serão
+                                        preenchidos os afastamentos
+                                        que o militar teve entre 01 de julho do ano anterior e 30 de junho do ano da
+                                        AADP. Para maiores informações clique ao lado em <b>"Saiba
+                                            mais"</b> </p>
+                                </span>
+                                <button id="modal-disp" class="button-saiba">Saiba
+                                    mais</button>
+                            </div>
                             <select name="afastamento" id="disponibilidade"
                                 onchange="myFunction('disponibilidade', 'disponibilidade-nota')">
                                 <option value="---" data-default selected></option>
@@ -292,7 +303,8 @@
 
                     <div class="linha-f">
                         <div class="soma-aadp">
-                            <h5 style="text-align: center;font-size: 2rem;">Pontuação Obtida (AADP):</h5>
+                            <h5 style="text-align: center;font-size: 2rem;text-align: justify;">Pontuação Obtida (AADP):
+                            </h5>
                             <h5 class="resultado-soma-aadp" id="pontuacao-aadp">---</h5>
                             <div class="title-cas-adi">
                                 <label for="afastamento" id="nivel-aadp" class="form-lab"
@@ -333,10 +345,20 @@
                             <div class="title-cas">
                                 <label for="disciplina">AADP</label>
                             </div>
-                            <div class="linha-sub"><span>Resultado de Calculos de 4 variáveis</span><button
-                                    id="modal-aadp" class="button-saiba">Saiba
-                                    mais</button></div>
-                            <select name="afastamento">
+                            <div class="linha-sub">
+                                <span><strong>Resultado de Calculos de 4 variáveis</strong>
+                                    <p style="margin:1rem auto;line-height:2rem;text-align: justify;">Este campo será
+                                        preenchido
+                                        automaticamente com a AADP referente conforme a data de inclusão do militar.
+                                        Para maiores informações clique ao lado em <b>"Saiba
+                                            mais"</b>. Para simulação e exemplo cliqu no botão <span
+                                            style="color:red;font-weight:bold;">"INFORMAÇÕES COMPLEMENTARES" </span>logo
+                                        acima.</p>
+                                </span>
+                                <button id="modal-aadp" class="button-saiba">Saiba
+                                    mais</button>
+                            </div>
+                            <select name="afastamento" disabled>
                                 <option value="---" data-default selected>Preenchido automaticamente</option>
                             </select>
 
@@ -352,9 +374,17 @@
                             <div class="title-cas">
                                 <label for="disciplina" class="form-lab">Conceito</label>
                             </div>
-                            <div class="linha-sub"><span>Conceito individual previsto no CEDM</span><button
-                                    id="modal-conc" class="button-saiba">Saiba
-                                    mais</button></div>
+                            <div class="linha-sub">
+                                <span><strong>Conceito individual previsto no CEDM</strong>
+                                    <p style="margin:1rem auto;line-height:2rem;text-align: justify;">Aqui será
+                                        preenchido o Conceito que o
+                                        militar possuía no último dia de seu período avaliatório. Para maiores
+                                        informações clique ao lado em <b>"Saiba
+                                            mais"</b> </p>
+                                </span>
+                                <button id="modal-conc" class="button-saiba">Saiba
+                                    mais</button>
+                            </div>
                             <select name="conceito" id="conceito" onchange="myFunction('conceito', 'conceito-nota')">
                                 <option value="---" data-default selected></option>
                                 <option value="30">Conceito acima de B24</option>
@@ -376,9 +406,22 @@
                             <div class="title-cas">
                                 <label for="tpb" class="form-lab">TPB</label>
                             </div>
-                            <div class="linha-sub"><span>Provas com aptidão no TPB</span><button id="modal-tpb"
-                                    class="button-saiba">Saiba
-                                    mais</button></div>
+                            <div class="linha-sub">
+                                <span><strong>Provas com aptidão no TPB</strong>
+                                    <p style="margin:1rem auto;line-height:2rem;text-align: justify;">Aqui serão
+                                        preenchidos as provas
+                                        realizadas da seguinte forma: - ATP e TAF realizados no ano em que se inicia seu
+                                        período
+                                        avaliatório, ou na sua falta no ano anterior; - Tiro prático válido, ou seja, o
+                                        qual
+                                        tenha sido realizado nos 2 anos últimos anos (ou 2 anos anteriores ao ano da
+                                        ADI.
+                                        Para maiores
+                                        informações clique ao lado em <b>"Saiba
+                                            mais"</b> </p>
+                                </span>
+                                <button id="modal-tpb" class="button-saiba">Saiba mais</button>
+                            </div>
                             <select name="tpb" id="tpb" onchange="myFunction('tpb', 'tpb-nota')">
                                 <option value="---" data-default selected></option>
                                 <option value="20">Aptidão nas três provas</option>

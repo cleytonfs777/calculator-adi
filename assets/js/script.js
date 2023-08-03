@@ -4,7 +4,9 @@ window.onload = function() {
     title.classList.add('text-danger')
     legis.innerText = "Aviso Importante"
     legis.classList.add('text-danger')
-    contentm.innerHTML = "Esta calculadora não abrange todos os casos de aferição de AADP e ADI, não substituindo a consulta às legislações específicas, Resolução nº 807/2018 e Resolução nº 808/2018, especialmente no que tange aos casos especiais e específicos."
+    contentm.innerHTML = "<p>Esta calculadora não abrange todos os casos de aferição de AADP e ADI, não substituindo a consulta às legislações específicas, Resolução nº 807/2018 e Resolução nº 808/2018, especialmente no que tange aos casos especiais e específicos.</p><br>"
+    contentm.innerHTML += '<h4 class="main-h4">OBSERVAÇÃO</h4>'
+    contentm.innerHTML += "<p>Esta calculadora não se aplica às AADP's e ADI's de anos/períodos anteriores a 2019, devendo-se consultar as legislações vigentes à época (Resolução nº 85/2002, Resolução nº 133/2004, Resolução nº 343/2009 e Resolução nº 436/2011)</p>"
     toggleModal()
 }
 
