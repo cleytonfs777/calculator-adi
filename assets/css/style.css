@@ -758,3 +758,25 @@ h4.main-h4 {
 #tooltip{
     width: 35rem;
 }
+.info-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color:red;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: .3rem;
+    cursor: pointer;
+
+}
+span.center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+}
