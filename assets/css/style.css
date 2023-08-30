@@ -757,7 +757,11 @@ h4.main-h4 {
 }
 #tooltip{
     width: 35rem;
-}
+    max-width: 90%; /* ou a porcentagem que você achar apropriada */
+    word-wrap: break-word; /* quebra de palavras para evitar overflow */
+    white-space: normal; /* permite quebras de linha */
+    }
+    
 .info-icon {
     width: 2rem;
     height: 2rem;

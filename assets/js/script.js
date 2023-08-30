@@ -189,9 +189,9 @@ const modalConteudo5 = "<p>Art. 9º - O conceito individual previsto no CEDM ser
 
 const modalConteudo6 = "<p>Art. 10 - O TPB é a atividade que visa à atualização e o aperfeiçoamento do bombeiro militar, com vistas ao cumprimento de suas missões constitucionais.</p><p>Art. 11 - O TPB compreende o TAF, a ATP e o Tiro Prático, todos executados conforme normas em vigor na Corporação.</p><p>Art. 12 - O TPB, para fins de composição da ADI, será aferido em:I - 20 pontos para aptidão nas três provas;<br>II - 15 pontos para aptidão em duas das três provas;<br>III - 10 pontos para aptidão em uma das três provas;<br>IV - zero ponto para inaptidão em todas as provas.</p><hr><br><h3 style='text-align:left;'>Resolução 807/2018</h3><p>Art. 36 - Para apuração da ADI, os fatores de avaliação serão utilizados da seguinte forma:</p><p>[...]</p><p> III - para as provas do TPB, na apuração da pontuação prevista no art. 12, será observada a aptidão em cada uma das provas previstas no art. 11, da seguinte forma: </p><p>a) TAF e ATP realizados no ano de início do período avaliatório para a execução da ADI ou, na sua falta, no ano anterior; </p><p>b) Tiro prático válido no ano de execução da ADI.</p><p>[...]</p><hr><h4 style='text-align:center;margin-bottom:5px;background:rgba(0,0,0,.3);padding:5px;'>Exemplos </h4><p><b>Exemplo 1:</b> ADI 2023, para militar com período avaliatório de 18/01/2022 a 17/01/2023, deverá ser usado ATP e TAF realizados no ano de 2022 ou na sua falta no ano de 2021, ou seja, no ano em que se inicia seu período avaliatório, e na sua falta no ano anterior. Deverá também ser utilizado Tiro prático realizado nos anos de 2021, 2022 ou até 17/01/2023.</p><p><b>Exemplo 2:</b> ADI 2022, para militar que tenha período avaliatório de 30/04/2021 a 29/04/2022, deverá ser usado ATP e TAF realizados no ano de 2021 ou na sua falta no ano de 2020, ou seja, no ano em que se inicia seu período avaliatório, e na sua falta no ano anterior. Deverá também ser utilizado Tiro prático realizado nos anos de 2020, 2021 ou até 29/04/2022.</p>"
 
-const modalConteudo7 = "<p>Art. 5º - A AADP será realizada, anualmente, a partir do mês de julho, sendo que os seus critérios de aferição serão considerados na data de 30 de junho e conforme disposto nesta resolução.</p><p>Parágrafo único - A Unidade/Unidade apoiadora realizará a AADP conforme o seguinte cronograma:<br>I - no mês de julho, para todos os militares cogitados à promoção no ano;<br>II - no mês de julho, para todos os militares com aniversário de inclusão em julho e agosto;<br>III - até o mês de agosto, para todos os militares com aniversário de inclusão em setembro e outubro;<br>IV - até o mês de setembro, para todos os militares com aniversário de inclusão em novembro e dezembro;<br>V - até o mês de outubro, para todos os militares com aniversário de inclusão em janeiro e fevereiro;<br>VI - até o mês de novembro, para todos os militares com aniversário de inclusão em março e abril;<br>VII - até o mês de dezembro, para todos os militares com aniversário de inclusão em maio e junho.</p><hr><h4 style='text-align:center;margin-bottom:5px;background:rgba(0,0,0,.3);padding:5px;'>Exemplos </h4><p><b>Exemplo 1:</b> Para AADP 2023 - Preencha com a ATP feita em 2022.</p><p><b>Exemplo 2:</b> Para AADP 2022 - Preencha com a ATP feita em 2021.</p>"
+const modalConteudo7 = "<p>Art. 5º - A AADP será realizada, anualmente, a partir do mês de julho, sendo que os seus critérios de aferição serão considerados na data de 30 de junho e conforme disposto nesta resolução.</p><p>Parágrafo único - A Unidade/Unidade apoiadora realizará a AADP conforme o seguinte cronograma:<br>I - no mês de julho, para todos os militares cogitados à promoção no ano;<br>II - no mês de julho, para todos os militares com aniversário de inclusão em julho e agosto;<br>III - até o mês de agosto, para todos os militares com aniversário de inclusão em setembro e outubro;<br>IV - até o mês de setembro, para todos os militares com aniversário de inclusão em novembro e dezembro;<br>V - até o mês de outubro, para todos os militares com aniversário de inclusão em janeiro e fevereiro;<br>VI - até o mês de novembro, para todos os militares com aniversário de inclusão em março e abril;<br>VII - até o mês de dezembro, para todos os militares com aniversário de inclusão em maio e junho.</p>"
 
-const modalConteudo8 = "<p>Art. 36 - Para apuração da ADI, os fatores de avaliação serão utilizados da seguinte forma: </p><p>I - a AADP será aquela realizada no ano de confecção da ADI, para militares incluídos a partir de 1º de julho ou aquela realizada no ano anterior, para militares incluídos até 30 de junho</p><p>[...]</p><hr><h4 style='text-align:center;margin-bottom:5px;background:rgba(0,0,0,.3);padding:5px;'>Exemplos </h4><p><b>Exemplo 1:</b> Para AADP 2023 - Preencha com a ATP feita em 2022.</p><p><b>Exemplo 2:</b> Para AADP 2022 - Preencha com a ATP feita em 2021.</p>"
+const modalConteudo8 = "<p>Art. 36 - Para apuração da ADI, os fatores de avaliação serão utilizados da seguinte forma: </p><p>I - a AADP será aquela realizada no ano de confecção da ADI, para militares incluídos a partir de 1º de julho ou aquela realizada no ano anterior, para militares incluídos até 30 de junho</p><p>[...]</p>"
 
 const modalConteudo9 = "<p>Art. 29-A - A primeira AADP para os militares designados para o serviço ativo, oriundos de todos os quadros, será referenciada como AADP do ano da designação e será observado:</p><p>I - se a designação ocorrer até 30 de junho, a AADP será confeccionada observando o mesmo período de confecção da ADI;</p><p>II - se a designação ocorrer, após 30 de junho, a AADP será confeccionada observando o período da data da designação até a data de 30 de junho;</p><p>III - para o TAF e a ATP, será observada a prova executada dentro dos períodos listados nos incisos anteriores.</p><p>Parágrafo único. As demais AADP serão feitas conforme prazos e critérios previstos nesta resolução, utilizando os resultados do TAF e da ATP do ano anterior,independente se já foram utilizados na AADP do ano da designação.</p><hr><br><h3 style='text-align:left;'>Resolução 807/2018</h3><p>Art. 36 - Para apuração da ADI, os fatores de avaliação serão utilizados da seguinte forma:</p><p>[...]</p><p>§ 2º - Para os militares designados para o serviço ativo será observado para a primeira ADI a ser realizada:</p><p>I - se a designação ocorrer até 30 de junho do ano em curso, será utilizada a AADP confeccionada, considerando o mesmo período de confecção da ADI.</p><p>II - se a designação ocorrer após 30 de junho do ano em curso, será utilizada a AADP feita considerando o período da data da designação até a data de 30 de junho.</p><p>III - na falta de alguma das provas do TPB, poderá ser utilizada a prova executada no ano anterior ao último ano de efetivo serviço do militar quando na ativa ou quando de sua última designação.</p><hr><h4 style='text-align:center;margin-bottom:5px;background:rgba(0,0,0,.3);padding:5px;'>Exemplos </h4><p><b>Exemplo 1:</b> Para AADP 2023 - Preencha com a ATP feita em 2022.</p><p><b>Exemplo 2:</b> Para AADP 2022 - Preencha com a ATP feita em 2021.</p>"
 
@@ -313,46 +313,43 @@ openModalButton.forEach((el) => {
     });
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const tooltip = document.getElementById('tooltip');
     const tooltipTitle = document.getElementById('tooltip-title');
     const tooltipContent = document.getElementById('tooltip-content');
     const tooltipTargets = document.querySelectorAll('.tooltip-target');
 
-    function showTooltip(e) {
-        const tooltipTextTitle = e.target.getAttribute('data-tooltip-title');
-        const tooltipTextContent = e.target.getAttribute('data-tooltip');
-
-        tooltipTitle.innerHTML = tooltipTextTitle;
-        tooltipContent.innerHTML = tooltipTextContent;
-
-        let x = e.pageX || (e.touches ? e.touches[0].pageX : 0);
-        let y = e.pageY || (e.touches ? e.touches[0].pageY : 0);
-
-        let tooltipWidth = tooltip.offsetWidth;
-        let tooltipHeight = tooltip.offsetHeight;
-
-        tooltip.style.left = (x - tooltipWidth / 2) + 'px';
-        tooltip.style.top = (y + 15) + 'px';
-
-        tooltip.style.display = 'block';
-    }
-
-    function hideTooltip() {
-        tooltipTitle.textContent = '';
-        tooltipContent.textContent = '';
-        tooltip.style.display = 'none';
-    }
-
     tooltipTargets.forEach(target => {
-        target.addEventListener('mousemove', showTooltip);
-        target.addEventListener('mouseout', hideTooltip);
+        target.addEventListener('mousemove', function(e) {
+            const tooltipTextTitle = e.target.getAttribute('data-tooltip-title');
+            const tooltipTextContent = e.target.getAttribute('data-tooltip');
 
-        // Suporte para dispositivos móveis
-        target.addEventListener('touchstart', showTooltip);
-        target.addEventListener('touchend', hideTooltip);
+            tooltipTitle.innerHTML = tooltipTextTitle;
+            tooltipContent.innerHTML = tooltipTextContent;
+
+            // Usando pageX e pageY em vez de clientX e clientY
+            let tooltipWidth = tooltip.offsetWidth;
+            let tooltipHeight = tooltip.offsetHeight;
+
+            tooltip.style.left = (e.pageX - tooltipWidth / 2) + 'px'; // Centralizar horizontalmente
+            tooltip.style.top = (e.pageY + 15) + 'px'; // 15 pixels abaixo do cursor. Ajuste conforme necessário
+
+            // Mostra o tooltip
+            tooltip.style.display = 'block';
+        });
+
+        target.addEventListener('mouseout', function() {
+            tooltipTitle.textContent = '';
+            tooltipContent.textContent = '';
+            
+            // Esconde o tooltip
+            tooltip.style.display = 'none';
+        });
     });
 });
+
 
 
 
