@@ -328,8 +328,11 @@ document.addEventListener('DOMContentLoaded', function() {
             tooltipContent.innerHTML = tooltipTextContent;
 
             // Usando pageX e pageY em vez de clientX e clientY
-            tooltip.style.top = (e.pageY + 10) + 'px';
-            tooltip.style.left = (e.pageX + 10) + 'px';
+            let tooltipWidth = tooltip.offsetWidth;
+            let tooltipHeight = tooltip.offsetHeight;
+
+            tooltip.style.left = (e.pageX - tooltipWidth / 2) + 'px'; // Centralizar horizontalmente
+            tooltip.style.top = (e.pageY + 15) + 'px'; // 15 pixels abaixo do cursor. Ajuste conforme necessário
 
             // Mostra o tooltip
             tooltip.style.display = 'block';
@@ -344,5 +347,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
