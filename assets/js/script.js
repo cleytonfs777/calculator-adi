@@ -314,43 +314,92 @@ openModalButton.forEach((el) => {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Função para verificar se é uma tela pequena/dispositivo móvel
+    function isSmallScreen() {
+        return window.innerWidth < 768;
+    }
+
     const tooltip = document.getElementById('tooltip');
     const tooltipTitle = document.getElementById('tooltip-title');
     const tooltipContent = document.getElementById('tooltip-content');
     const tooltipTargets = document.querySelectorAll('.tooltip-target');
 
-    tooltipTargets.forEach(target => {
-        target.addEventListener('mousemove', function(e) {
-            const tooltipTextTitle = e.target.getAttribute('data-tooltip-title');
-            const tooltipTextContent = e.target.getAttribute('data-tooltip');
+    function handleTooltipDisplay(e) {
+        const tooltipTextTitle = e.target.getAttribute('data-tooltip-title');
+        const tooltipTextContent = e.target.getAttribute('data-tooltip');
 
-            tooltipTitle.innerHTML = tooltipTextTitle;
-            tooltipContent.innerHTML = tooltipTextContent;
+        tooltipTitle.innerHTML = tooltipTextTitle;
+        tooltipContent.innerHTML = tooltipTextContent;
 
-            // Usando pageX e pageY em vez de clientX e clientY
+        if (isSmallScreen()) {
+            let y = e.touches ? e.touches[0].pageY : e.pageY;
+            tooltip.style.left = '50%'; // Centralizado horizontalmente
+            tooltip.style.transform = 'translateX(-50%)'; // Para verdadeiramente centralizar
+            tooltip.style.top = (y + 10) + 'px'; // 10 pixels abaixo do toque
+        } else {
+            let x = e.pageX;
+            let y = e.pageY;
             let tooltipWidth = tooltip.offsetWidth;
-            let tooltipHeight = tooltip.offsetHeight;
+            tooltip.style.left = (x - tooltipWidth / 2) + 'px'; // Centralizar horizontalmente
+            tooltip.style.top = (y + 15) + 'px'; // 15 pixels abaixo do cursor
+            tooltip.style.transform = ''; // Remove a transformação
+        }
 
-            tooltip.style.left = (e.pageX - tooltipWidth / 2) + 'px'; // Centralizar horizontalmente
-            tooltip.style.top = (e.pageY + 15) + 'px'; // 15 pixels abaixo do cursor. Ajuste conforme necessário
+        // Mostra o tooltip
+        tooltip.style.display = 'block';
+    }
 
-            // Mostra o tooltip
-            tooltip.style.display = 'block';
+    function hideTooltip() {
+        tooltipTitle.textContent = '';
+        tooltipContent.textContent = '';
+        tooltip.style.display = 'none';
+    }
+
+    function clickInsideElement(e, className) {
+        let el = e.srcElement || e.target;
+    
+        if (el.classList.contains(className)) {
+            return el;
+        } else {
+            while (el = el.parentNode) {
+                if (el.classList && el.classList.contains(className)) {
+                    return el;
+                }
+            }
+        }
+    
+        return false;
+    }
+    
+
+    if (isSmallScreen()) {
+        tooltipTargets.forEach(target => {
+            target.addEventListener('click', function(e) {
+                if (tooltip.style.display === 'block' && tooltipTitle.textContent === e.target.getAttribute('data-tooltip-title')) {
+                    hideTooltip();
+                } else {
+                    handleTooltipDisplay(e);
+                }
+            });
         });
-
-        target.addEventListener('mouseout', function() {
-            tooltipTitle.textContent = '';
-            tooltipContent.textContent = '';
-            
-            // Esconde o tooltip
-            tooltip.style.display = 'none';
+    } else {
+        tooltipTargets.forEach(target => {
+            target.addEventListener('mousemove', handleTooltipDisplay);
+            target.addEventListener('mouseout', hideTooltip);
         });
+    }
+    
+    document.addEventListener('click', function(e) {
+        let insideTooltip = clickInsideElement(e, 'tooltip-hidden');
+        let insideIcon = clickInsideElement(e, 'tooltip-target');
+    
+        if (!insideTooltip && !insideIcon) {
+            hideTooltip();
+        }
     });
 });
-
-
 
 
 
